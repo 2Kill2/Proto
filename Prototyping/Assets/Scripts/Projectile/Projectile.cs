@@ -1,7 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
+
 
 [RequireComponent (typeof(SpriteRenderer))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
     [Tooltip("All data for this projectile")]
@@ -10,6 +11,7 @@ public class Projectile : MonoBehaviour
     public string Name;
 
     private SpriteRenderer _spriteRenderer;
+    private Rigidbody2D _rb;
     private void Awake()
     {
        _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,4 +25,10 @@ public class Projectile : MonoBehaviour
     {
         
     }
+
+    private void OnDisable()
+    {
+        ProjectileManager.Instance.AddToCache(this);
+    }
+
 }

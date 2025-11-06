@@ -8,7 +8,7 @@ public class ProjectileManager : MonoBehaviour
     [SerializeField] protected Dictionary<string, Projectile> ProjectileCache = new Dictionary<string, Projectile>();
 
     //Singleton
-    private ProjectileManager Instance;
+    public static ProjectileManager Instance;
 
     private void Awake()
     {
@@ -16,12 +16,23 @@ public class ProjectileManager : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+
+
+
+      
     }
 
-
-    public void ShootProjectileFromPosition(Projectile projectile)
+    [SerializeField] Projectile TestProjectile;
+    private void Update()
     {
-
+        if(Input.GetMouseButtonDown(0))
+        {
+            ShootProjectileFromPosition(TestProjectile, Vector2.zero, Vector2.left);
+        }
+    }
+    public void ShootProjectileFromPosition(Projectile projectile, Vector3 Pos, Vector3 Rotation)
+    {
+        NewProjectile(projectile, Pos, Rotation);
     }
     public void AddToCache(Projectile projectile)
     {
