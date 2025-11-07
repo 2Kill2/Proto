@@ -129,4 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 98f2be789aef9bb498a131cd8629a8d8, type: 2}
-  Name: 
+  LayerToDamage:
+    serializedVersion: 2
+    m_Bits: 16

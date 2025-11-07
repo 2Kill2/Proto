@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   NameID: Test
+  Damage: 1
   Velocity: 10
   Spread: 5
   Lifetime: 2
   Firerate: 1
+  Size: {x: 1, y: 1}
   PhysicsMaterial: {fileID: 0}
   Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   Color:

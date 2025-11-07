@@ -19,16 +19,31 @@ public class ProjectileManager : MonoBehaviour
 
     #region SpawnTypes
 
+    /// <summary>
+    /// Fire a single shot
+    /// </summary>
+    /// <param name="projectile"></param>
+    /// <param name="pos"></param>
+    /// <param name="rotation">Angle to shoot</param>
     public void ShootProjectileFromPosition(Projectile projectile, Vector3 pos, float rotation)
     {
         NewProjectile(projectile, pos, rotation);
     }
 
+    /// <summary>
+    /// Fire in an arc
+    /// </summary>
+    /// <param name="projectile"></param>
+    /// <param name="pos">where to shoot from</param>
+    /// <param name="projectileCount">How many shots to fire</param>
+    /// <param name="spawnRadius">Set to 360 to shoot in a full circle</param>
+    /// <param name="offset">direction to shoot</param>
     public void ShootProjectileInRing(Projectile projectile, Vector3 pos, int projectileCount, float spawnRadius, float offset)
     {
         ShootProjectilesInArc(projectile, pos, projectileCount, spawnRadius,offset);
     }
 
+   
     public void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
     {
         if (projectileCount <= 0) return;

@@ -7,11 +7,14 @@ public class ProjectileData : ScriptableObject
     [SerializeField] string NameID;
 
     [Header("Stats")]
+    [SerializeField] float Damage;
     [SerializeField] float Velocity;
     [SerializeField] float Spread;
     [SerializeField] float Lifetime;
     [SerializeField] float Firerate;
     [SerializeField] Vector2 Size;
+
+
 
     [Tooltip("Allows the use of bounce or friction, leave empty for no extra behaviour")]
     [SerializeField] PhysicsMaterial2D PhysicsMaterial = null;
@@ -35,6 +38,12 @@ public class ProjectileData : ScriptableObject
     public Color32 color => Color;
     public string nameID => NameID;
     public Vector2 size => Size;
+   
+    public float damage => Damage;
+    #endregion
+
+    #region Enums
+    
 
     #endregion
 }

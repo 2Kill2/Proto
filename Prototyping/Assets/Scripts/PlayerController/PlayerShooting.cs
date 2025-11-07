@@ -25,7 +25,7 @@ public class PlayerShooting : MonoBehaviour
     private float GetMouseAngle()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = transform.position.z; // ensure same plane
+        mousePos.z = transform.position.z;
         Vector2 direction = mousePos - transform.position;
         return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
