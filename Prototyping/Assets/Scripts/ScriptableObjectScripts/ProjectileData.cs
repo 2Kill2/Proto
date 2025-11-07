@@ -11,6 +11,7 @@ public class ProjectileData : ScriptableObject
     [SerializeField] float Spread;
     [SerializeField] float Lifetime;
     [SerializeField] float Firerate;
+    [SerializeField] Vector2 Size;
 
     [Tooltip("Allows the use of bounce or friction, leave empty for no extra behaviour")]
     [SerializeField] PhysicsMaterial2D PhysicsMaterial = null;
@@ -24,15 +25,16 @@ public class ProjectileData : ScriptableObject
     [Tooltip("Leave as white to keep original sprite")]
     [SerializeField] Color32 Color;
 
-    //Getters
+    #region Getters
+  
     public float velocity => Velocity;
     public float spread => Spread;
     public float lifetime => Lifetime;
     public float firerate => Firerate;
-
     public Sprite sprite => Sprite;
-
     public Color32 color => Color;
-
     public string nameID => NameID;
+    public Vector2 size => Size;
+
+    #endregion
 }

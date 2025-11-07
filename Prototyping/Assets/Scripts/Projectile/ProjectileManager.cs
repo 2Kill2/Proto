@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
@@ -13,24 +15,43 @@ public class ProjectileManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    [SerializeField] Projectile TestProjectile;
-    [SerializeField] Projectile TestProjectile2;
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ShootProjectileFromPosition(TestProjectile, Vector2.zero, 0);
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            ShootProjectileFromPosition(TestProjectile2, Vector2.zero, 0);
-        }
-    }
+   
+
+    #region SpawnTypes
 
     public void ShootProjectileFromPosition(Projectile projectile, Vector3 pos, float rotation)
     {
         NewProjectile(projectile, pos, rotation);
     }
+
+    public void ShootProjectileInRing(Projectile projectile, Vector3 pos, int projectileCount, float spawnRadius, float offset)
+    {
+        ShootProjectilesInArc(projectile, pos, projectileCount, spawnRadius,offset);
+    }
+
+    public void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
+    {
+        if (projectileCount <= 0) return;
+
+        float step = arcAngle / projectileCount;
+
+        // Start angle so projectiles are centered around rotationOffset
+        float startAngle = rotationOffset - arcAngle / 2f + step / 2f;
+
+        for (int i = 0; i < projectileCount; i++)
+        {
+            float angle = startAngle + step * i;
+            NewProjectile(projectile, pos, angle);
+        }
+    }
+
+
+
+
+
+
+    #endregion
+
 
     /// <summary>
     /// Called by projectiles when they are set inactive
@@ -51,7 +72,7 @@ public class ProjectileManager : MonoBehaviour
     /// <param name="position"></param>
     /// <param name="rotation"></param>
     /// <returns></returns>
-    private Projectile NewProjectile(Projectile spawn, Vector3 position, float rotation)
+    private void NewProjectile(Projectile spawn, Vector3 position, float rotation)
     {
         if (ProjectilePool.TryGetValue(spawn.Data.nameID, out var list) && list.Count > 0)
         {
@@ -61,10 +82,25 @@ public class ProjectileManager : MonoBehaviour
             cached.gameObject.SetActive(true);
             cached.transform.SetPositionAndRotation(position, Quaternion.Euler(new Vector3(0, 0, rotation)));
 
-            return cached;
+            // Set linear velocity along current rotation
+            if (cached.TryGetComponent<Rigidbody2D>(out var rb))
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.linearVelocity = (Vector2)cached.transform.right * cached.Data.velocity;
+            }
+
+            return;
         }
 
         Projectile projectile = Instantiate(spawn, position, Quaternion.Euler(new Vector3(0, 0, rotation)));
-        return projectile;
+
+        if (projectile.TryGetComponent<Rigidbody2D>(out var rbNew))
+        {
+            rbNew.linearVelocity = Vector2.zero;
+            rbNew.linearVelocity = (Vector2)projectile.transform.right * projectile.Data.velocity;
+        }
+
+        return;
     }
+
 }
