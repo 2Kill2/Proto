@@ -1,70 +1,70 @@
-
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    [SerializeField] protected Dictionary<string, Projectile> ProjectileCache = new Dictionary<string, Projectile>();
-
-    //Singleton
     public static ProjectileManager Instance;
+
+    [SerializeField] protected Dictionary<string, List<Projectile>> ProjectilePool = new();
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(this);
-
-
-
-      
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     [SerializeField] Projectile TestProjectile;
+    [SerializeField] Projectile TestProjectile2;
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            ShootProjectileFromPosition(TestProjectile, Vector2.zero, Vector2.left);
+            ShootProjectileFromPosition(TestProjectile, Vector2.zero, 0);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            ShootProjectileFromPosition(TestProjectile2, Vector2.zero, 0);
         }
     }
-    public void ShootProjectileFromPosition(Projectile projectile, Vector3 Pos, Vector3 Rotation)
+
+    public void ShootProjectileFromPosition(Projectile projectile, Vector3 pos, float rotation)
     {
-        NewProjectile(projectile, Pos, Rotation);
-    }
-    public void AddToCache(Projectile projectile)
-    {
-       ProjectileCache.Add(projectile.Name, projectile);
+        NewProjectile(projectile, pos, rotation);
     }
 
     /// <summary>
-    /// Acts as a modified instantiate which only creates new instances if there isnt one already
+    /// Called by projectiles when they are set inactive
     /// </summary>
-    /// <param name="Spawn">The projectile</param>
-    /// <param name="Position">the position</param>
-    /// <param name="Rotation">the rotation</param>
-    /// <returns></returns>
-    private Projectile NewProjectile(Projectile Spawn, Vector3 Position, Vector3 Rotation)
+    /// <param name="projectile"></param>
+    public void AddToPool(Projectile projectile)
     {
-        if (ProjectileCache.TryGetValue(Spawn.Name, out Projectile CachedProjectile))
-        {
-            CachedProjectile.gameObject.SetActive(true);
-            ProjectileCache.Remove(CachedProjectile.Name);
+        if (!ProjectilePool.TryGetValue(projectile.Data.nameID, out var list))
+            ProjectilePool[projectile.Data.nameID] = list = new List<Projectile>();
 
-            CachedProjectile.transform.position = Position;
-            CachedProjectile.transform.rotation = Quaternion.Euler(Rotation);
-
-            return CachedProjectile;
-        }
-       
-        Projectile projectile = Instantiate(Spawn, Position, Quaternion.Euler(Rotation));
-
-        ProjectileCache.Add(projectile.Name, projectile);
-
-        return projectile;
+        list.Add(projectile);
     }
 
-  
+    /// <summary>
+    /// Calls to spawn a projectile somewhere, pulls from existing pool if possible
+    /// </summary>
+    /// <param name="spawn"></param>
+    /// <param name="position"></param>
+    /// <param name="rotation"></param>
+    /// <returns></returns>
+    private Projectile NewProjectile(Projectile spawn, Vector3 position, float rotation)
+    {
+        if (ProjectilePool.TryGetValue(spawn.Data.nameID, out var list) && list.Count > 0)
+        {
+            Projectile cached = list[0];
+            list.RemoveAt(0);
+
+            cached.gameObject.SetActive(true);
+            cached.transform.SetPositionAndRotation(position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+
+            return cached;
+        }
+
+        Projectile projectile = Instantiate(spawn, position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+        return projectile;
+    }
 }
