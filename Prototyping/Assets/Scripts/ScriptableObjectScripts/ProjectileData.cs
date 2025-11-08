@@ -13,9 +13,7 @@ public class ProjectileData : ScriptableObject
     [SerializeField] float Lifetime;
     [SerializeField] float Firerate;
     [SerializeField] float Size;
-
-    [Tooltip("Allows the use of bounce or friction, leave empty for no extra behaviour")]
-    [SerializeField] PhysicsMaterial2D PhysicsMaterial = null;
+    
 
     [Header("Visuals")]
 
@@ -23,6 +21,9 @@ public class ProjectileData : ScriptableObject
 
     [Tooltip("Leave as white to keep original sprite")]
     [SerializeField] Color32 Color;
+
+    [Header("Extra")]
+    [SerializeField] AudioClip ShootAudio;
 
     #region Getters
   
@@ -34,8 +35,8 @@ public class ProjectileData : ScriptableObject
     public Color32 color => Color;
     public string nameID => NameID;
     public float size => Size;
-   
     public float damage => Damage;
+    public AudioClip shootAudio => ShootAudio;
     #endregion
 
    

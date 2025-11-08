@@ -34,12 +34,12 @@ public class Health : MonoBehaviour
     private void Damage(float Amount)
     {
         CurrentHealth -= Amount;
-        //Damaged.Invoke();
+        if(Damaged != null) Damaged.Invoke();
     }
     private void Heal(float Amount) 
     {
         CurrentHealth += Amount; 
-        //Healed.Invoke();
+        if(Healed != null) Healed.Invoke();
     }
     private void RefillHealth() => CurrentHealth = StartingHealth;
 

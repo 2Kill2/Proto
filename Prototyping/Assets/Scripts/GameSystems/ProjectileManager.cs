@@ -15,8 +15,6 @@ public class ProjectileManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-   
-
     #region SpawnTypes
 
     /// <summary>
@@ -61,10 +59,6 @@ public class ProjectileManager : MonoBehaviour
    }
 
 
-
-
-
-
     #endregion
 
 
@@ -96,6 +90,11 @@ public class ProjectileManager : MonoBehaviour
 
             cached.gameObject.SetActive(true);
             cached.transform.SetPositionAndRotation(position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+
+            if(cached.Data.shootAudio != null)
+            {
+                AudioSource.PlayClipAtPoint(cached.Data.shootAudio,position);
+            }
 
             // Set linear velocity along current rotation
             if (cached.TryGetComponent<Rigidbody2D>(out var rb))

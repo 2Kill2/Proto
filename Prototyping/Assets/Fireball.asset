@@ -19,8 +19,8 @@ MonoBehaviour:
   Lifetime: 1.29
   Firerate: 1.02
   Size: 2.05
-  PhysicsMaterial: {fileID: 0}
   Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   Color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190335
+  ShootAudio: {fileID: 0}
