@@ -28,21 +28,10 @@ public class ProjectileManager : MonoBehaviour
         NewProjectile(projectile, pos, rotation);
     }
 
-    /// <summary>
-    /// Fire in an arc
-    /// </summary>
-    /// <param name="projectile"></param>
-    /// <param name="pos">where to shoot from</param>
-    /// <param name="projectileCount">How many shots to fire</param>
-    /// <param name="spawnRadius">Set to 360 to shoot in a full circle</param>
-    /// <param name="offset">direction to shoot</param>
-    public void ShootProjectileInRing(Projectile projectile, Vector3 pos, int projectileCount, float spawnRadius, float offset)
-    {
-        ShootProjectilesInArc(projectile, pos, projectileCount, spawnRadius,offset);
-    }
+  
 
    
-   private void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
+   public void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
    {
         if (projectileCount <= 0) return;
 
@@ -83,38 +72,36 @@ public class ProjectileManager : MonoBehaviour
     /// <returns></returns>
     private void NewProjectile(Projectile spawn, Vector3 position, float rotation)
     {
-        if (ProjectilePool.TryGetValue(spawn.Data.nameID, out var list) && list.Count > 0)
+        Projectile projectile = null;
+
+        if (ProjectilePool.TryGetValue(spawn.Data.nameID, out var list))
         {
-            Projectile cached = list[0];
-            list.RemoveAt(0);
-
-            cached.gameObject.SetActive(true);
-            cached.transform.SetPositionAndRotation(position, Quaternion.Euler(new Vector3(0, 0, rotation)));
-
-            if(cached.Data.shootAudio != null)
+            // Look for an inactive projectile
+            for (int i = 0; i < list.Count; i++)
             {
-                AudioSource.PlayClipAtPoint(cached.Data.shootAudio,position);
+                if (!list[i].gameObject.activeInHierarchy)
+                {
+                    projectile = list[i];
+                    list.RemoveAt(i);
+                    break;
+                }
             }
-
-            // Set linear velocity along current rotation
-            if (cached.TryGetComponent<Rigidbody2D>(out var rb))
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.linearVelocity = (Vector2)cached.transform.right * cached.Data.velocity;
-            }
-
-            return;
         }
 
-        Projectile projectile = Instantiate(spawn, position, Quaternion.Euler(new Vector3(0, 0, rotation)));
-
-        if (projectile.TryGetComponent<Rigidbody2D>(out var rbNew))
+        if (projectile == null)
         {
-            rbNew.linearVelocity = Vector2.zero;
-            rbNew.linearVelocity = (Vector2)projectile.transform.right * projectile.Data.velocity;
+            projectile = Instantiate(spawn, position, Quaternion.Euler(0f, 0f, rotation));
+        }
+        else
+        {
+            projectile.transform.SetPositionAndRotation(position, Quaternion.Euler(0f, 0f, rotation));
+            projectile.gameObject.SetActive(true);
         }
 
-        return;
+        // Set velocity inside projectile's OnEnable
+        if (projectile.Data.shootAudio != null)
+            AudioSource.PlayClipAtPoint(projectile.Data.shootAudio, position);
     }
+
 
 }

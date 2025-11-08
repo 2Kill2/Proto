@@ -37,6 +37,7 @@ public class Projectile : MonoBehaviour
 
     private void OnDisable()
     {
+        _rb.linearVelocity = Vector2.zero;
         ProjectileManager.Instance.AddToPool(this);
     }
 

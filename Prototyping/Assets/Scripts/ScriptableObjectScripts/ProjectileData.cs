@@ -11,6 +11,8 @@ public class ProjectileData : ScriptableObject
     [SerializeField] float Velocity;
     [SerializeField] float Spread;
     [SerializeField] float Lifetime;
+
+    [Tooltip("Shots per second")]
     [SerializeField] float Firerate;
     [SerializeField] float Size;
     

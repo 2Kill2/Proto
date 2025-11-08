@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218ec2d1ef2aa5f44a451b500b29de58, type: 3}
+  m_Name: ZapArc
+  m_EditorClassIdentifier: 
+  Name: 
+  Description: 
+  Icon: {fileID: 0}
+  Price: 0
+  TriggerEvent: 1
+  TriggerPercentage: 30.2
+  Projectile: {fileID: 4311727026875598617, guid: fbe7822d08aa2ef419897dfcab20a18e, type: 3}
+  ProjectileCount: 10
+  ArcAngle: 10

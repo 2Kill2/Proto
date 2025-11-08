@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbad2e7305b43d74991dadced16a3aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StoredItem: {fileID: 11400000, guid: 6a65454d87385ce479e9c62fe959d745, type: 2}
+  StoredItem: {fileID: 11400000, guid: dbdcca797d4683542a5574c2b087aac2, type: 2}
   Price: 0
   InfoDisplay: {fileID: 0}
 --- !u!61 &1981720447

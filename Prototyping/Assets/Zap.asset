@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83cedd681e4536b409666496bdd66f36, type: 3}
-  m_Name: Test
+  m_Name: Zap
   m_EditorClassIdentifier: 
-  NameID: Test
-  Damage: 1
-  Velocity: 8.2
-  Spread: 9
-  Lifetime: 0.65
-  Firerate: 14.57
-  Size: 1.5
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  NameID: ZapShot
+  Damage: 0.5
+  Velocity: 20
+  Spread: 0
+  Lifetime: 0.5
+  Firerate: 0
+  Size: 0.5
+  Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4278255593
   ShootAudio: {fileID: 0}
