@@ -1,19 +1,18 @@
 using UnityEngine;
 
 
-public abstract class Item : MonoBehaviour
+public class Item : MonoBehaviour
 {
     public ItemData Data;
 
-    private void Awake()
+    private PlayerShooting shooting;
+    private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = Data.Sprite;
+
+        shooting = GetComponent<PlayerShooting>();
         AssignToEvent();
     }
-    private void Update()
-    {
-        PassiveEffect();
-    }
+   
 
     /// <summary>
     /// What event does this listen to?
@@ -40,11 +39,11 @@ public abstract class Item : MonoBehaviour
     /// <summary>
     /// Triggered by an event or custom action
     /// </summary>
-    protected abstract void Effect();
-    protected virtual void PassiveEffect()
+    protected void Effect()
     {
-        //Optional field
+        Data.Trigger(transform.position,shooting.AimAngle);
     }
+    
     
 
 

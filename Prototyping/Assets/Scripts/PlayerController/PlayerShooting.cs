@@ -7,50 +7,57 @@ public class PlayerShooting : MonoBehaviour
     public event Action PrimaryShot;
     public event Action SecondaryShot;
 
-    [SerializeField] ClassData Data;
+    [SerializeField] private ClassData Data;
 
-    float _stickAngle;
+    public float AimAngle;
+    private bool _usingGamepad;
+
+    private void Update()
+    {
+        // Continuously update aim if using mouse
+        if (!_usingGamepad)
+        {
+            AimAngle = GetMouseAngle();
+        }
+    }
+
+    public void StickAim(InputAction.CallbackContext input)
+    {
+        Vector2 direction = input.ReadValue<Vector2>();
+
+        // If the stick is moved, switch to gamepad aiming
+        if (direction.sqrMagnitude > 0.01f)
+        {
+            _usingGamepad = true;
+            AimAngle = DirectionToAngle(direction);
+        }
+        else
+        {
+            // If the stick is released, fall back to mouse aiming
+            _usingGamepad = false;
+        }
+    }
+
     public void ShootInputPrimary(InputAction.CallbackContext input)
     {
         if (!input.performed) return;
-        InputDevice device = input.control.device;
 
-        float angle = 0;
+        ProjectileManager.Instance.ShootProjectileFromPosition(
+            Data.Primary, transform.position, AimAngle);
 
-        if (device is Gamepad)
-            angle = _stickAngle;
-        else
-            angle = GetMouseAngle();
-
-        ProjectileManager.Instance.ShootProjectileFromPosition(Data.Primary, transform.position, angle);
-        if(PrimaryShot != null) PrimaryShot.Invoke();
-
+        PrimaryShot?.Invoke();
     }
-    
 
     public void ShootInputSecondary(InputAction.CallbackContext input)
     {
         if (!input.performed) return;
-        InputDevice device = input.control.device;
 
-        float angle = 0;
+        ProjectileManager.Instance.ShootProjectileInRing(
+            Data.Secondary, transform.position, 5, 20, AimAngle);
 
-        if(device is Gamepad)
-             angle = _stickAngle;
-        else
-            angle = GetMouseAngle();
-
-
-
-            ProjectileManager.Instance.ShootProjectileInRing(Data.Secondary, transform.position, 5, 20, angle);
-        if(SecondaryShot != null) SecondaryShot.Invoke();
+        SecondaryShot?.Invoke();
     }
-    
 
-    public void StickAim(InputAction.CallbackContext input)
-    {
-        _stickAngle = DirectionToAngle(input.ReadValue<Vector2>());
-    }
     private float GetMouseAngle()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -59,13 +66,10 @@ public class PlayerShooting : MonoBehaviour
         return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
 
-
     private float DirectionToAngle(Vector2 direction)
     {
-      
         if (direction.sqrMagnitude < 0.0001f)
-            return 0f;
-
+            return AimAngle; // Keep last valid angle
         return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
 }

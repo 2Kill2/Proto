@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2862bdb5a783064e9ce18bd0b6c4f05, type: 3}
-  m_Name: Warrior
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: DoubleShot
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Item
   Description: 
-  PrimaryFire: {fileID: 4311727026875598617, guid: fcca1c68fea1a8c4c94ae54802ac185a, type: 3}
-  SecondaryFire: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}
+  Icon: {fileID: 0}
+  Price: 0
+  TriggerEvent: 1
+  TriggerPercentage: 55.4
+  Projectile: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}

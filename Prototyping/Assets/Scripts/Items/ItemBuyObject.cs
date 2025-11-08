@@ -4,14 +4,15 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ItemBuyObject : MonoBehaviour
 {
-    private Item _storedItem;
-
+    [SerializeField] private ItemData StoredItem;
+    [SerializeField] private int Price;
     //Display info using item.Data
     [SerializeField] Canvas InfoDisplay;
 
-    public void ItemToStore(Item item, int price)
+    public void ItemToStore(ItemData item)
     {
-        _storedItem = item;
+        StoredItem = item;
+        Price = item.price;
     }
 
     /// <summary>
@@ -19,8 +20,13 @@ public class ItemBuyObject : MonoBehaviour
     /// </summary>
     private void Interact(GameObject player)
     {
-        //Buy logic
+        // if gold check passes etc
+
+       Item item = player.AddComponent<Item>();
+        item.Data = StoredItem;
+       
     }
+
     //Display Tooltips
     private void OnTriggerEnter2D(Collider2D collision)
     {

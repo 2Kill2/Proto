@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 63782afd1c3ab10439e76e2bbf3b7368, type: 2}
+  AimAngle: 0
 --- !u!114 &1235653629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbad2e7305b43d74991dadced16a3aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StoredItem: {fileID: 11400000, guid: 6a65454d87385ce479e9c62fe959d745, type: 2}
+  Price: 0
   InfoDisplay: {fileID: 0}
 --- !u!61 &1981720447
 BoxCollider2D:

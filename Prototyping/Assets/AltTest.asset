@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameID: Test2
   Damage: 1
-  Velocity: 10
-  Spread: 5
+  Velocity: 24.2
+  Spread: 44.4
   Lifetime: 2
   Firerate: 1
   Size: 1
-  PhysicsMaterial: {fileID: 0}
   Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   Color:
     serializedVersion: 2
     rgba: 4278255364
+  ShootAudio: {fileID: 0}

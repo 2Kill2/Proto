@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemData", menuName = "Create Data Object/ItemData")]
-public class ItemData : ScriptableObject
+
+public abstract class ItemData : ScriptableObject
 {
     public enum TriggerEvents
     {
@@ -16,6 +16,7 @@ public class ItemData : ScriptableObject
     [SerializeField] private string Name;
     [SerializeField] private string Description;
     [SerializeField] private Sprite Icon;
+    [SerializeField] private int Price;
 
 
     [Header("Data")]
@@ -27,4 +28,8 @@ public class ItemData : ScriptableObject
     public string itemName => Name;
     public string description => Description;
     public Sprite Sprite => Icon;
+    public int price => Price;
+
+    public abstract void Trigger(Vector3 pos = default, float rotation = default);
+    
 }
