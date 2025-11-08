@@ -1,9 +1,13 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    public event Action Damaged;
+    public event Action Healed;
+
     [SerializeField] float StartingHealth;
     public float CurrentHealth 
     { 
@@ -11,13 +15,13 @@ public class Health : MonoBehaviour
         set
         {
             _health = value;
-            Debug.Log(_health);
+           
             CheckState();
         }
     }
 
     private float _health;
-   
+
 
     [SerializeField] UnityEvent Dead;
 
@@ -27,14 +31,24 @@ public class Health : MonoBehaviour
     }
 
     //Call these functions using Send Message 
-    private void Damage(float Amount) => CurrentHealth -= Amount;
-    private void Heal(float Amount) => CurrentHealth += Amount;
+    private void Damage(float Amount)
+    {
+        CurrentHealth -= Amount;
+        //Damaged.Invoke();
+    }
+    private void Heal(float Amount) 
+    {
+        CurrentHealth += Amount; 
+        //Healed.Invoke();
+    }
     private void RefillHealth() => CurrentHealth = StartingHealth;
-
 
     private void CheckState()
     {
-
+        if(_health < 0)
+        {
+            Dead.Invoke();
+        }
     }
 
 

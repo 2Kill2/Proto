@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public event Action PrimaryShot;
+    public event Action SecondaryShot;
+
     [SerializeField] Projectile PrimaryProjectile;
     [SerializeField] Projectile SecondaryProjectile;
 
@@ -12,6 +16,10 @@ public class PlayerShooting : MonoBehaviour
 
         float angle = GetMouseAngle();
         ProjectileManager.Instance.ShootProjectileFromPosition(PrimaryProjectile, transform.position, angle);
+        //PrimaryShot.Invoke();
+
+        
+
     }
 
     public void ShootInputSecondary(InputAction.CallbackContext input)
@@ -19,7 +27,8 @@ public class PlayerShooting : MonoBehaviour
         if (!input.performed) return;
 
         float angle = GetMouseAngle();
-        ProjectileManager.Instance.ShootProjectileInRing(SecondaryProjectile, transform.position, 5, 30, angle);
+        ProjectileManager.Instance.ShootProjectileInRing(SecondaryProjectile, transform.position, 5, 20, angle);
+        //SecondaryShot.Invoke();
     }
 
     private float GetMouseAngle()

@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     private float _lifetime;
     private void Awake()
     {
-        transform.localScale = Data.size;
+        transform.localScale = new Vector2(Data.size,Data.size);
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -58,15 +58,17 @@ public class Projectile : MonoBehaviour
         Vector2 direction = transform.right; // local forward
 
         // CircleCast for hits
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, Data.size.x / 2f, direction, distance, LayerToDamage);
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, Data.size / 2f, direction, distance, LayerToDamage);
         if (hit.collider != null)
         {
-            Debug.Log($"Hit: {hit.collider.name}");
-
+          
             //deal damage
-            hit.collider.gameObject.SendMessage("Damage", Data.damage);
+            hit.collider.gameObject.SendMessage("Damage", Data.damage,SendMessageOptions.DontRequireReceiver);
             
             gameObject.SetActive(false);
+
+
+            
         }
 
        

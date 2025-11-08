@@ -1,6 +1,6 @@
-using System.Collections;
+
 using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
+
 using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
@@ -44,8 +44,8 @@ public class ProjectileManager : MonoBehaviour
     }
 
    
-    public void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
-    {
+   private void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
+   {
         if (projectileCount <= 0) return;
 
         float step = arcAngle / projectileCount;
@@ -58,7 +58,7 @@ public class ProjectileManager : MonoBehaviour
             float angle = startAngle + step * i;
             NewProjectile(projectile, pos, angle);
         }
-    }
+   }
 
 
 
