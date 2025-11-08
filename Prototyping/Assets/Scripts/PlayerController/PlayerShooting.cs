@@ -7,8 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public event Action PrimaryShot;
     public event Action SecondaryShot;
 
-    [SerializeField] Projectile PrimaryProjectile;
-    [SerializeField] Projectile SecondaryProjectile;
+    [SerializeField] ClassData Data;
 
     float _stickAngle;
     public void ShootInputPrimary(InputAction.CallbackContext input)
@@ -23,7 +22,7 @@ public class PlayerShooting : MonoBehaviour
         else
             angle = GetMouseAngle();
 
-        ProjectileManager.Instance.ShootProjectileFromPosition(PrimaryProjectile, transform.position, angle);
+        ProjectileManager.Instance.ShootProjectileFromPosition(Data.Primary, transform.position, angle);
         if(PrimaryShot != null) PrimaryShot.Invoke();
 
     }
@@ -43,7 +42,7 @@ public class PlayerShooting : MonoBehaviour
 
 
 
-            ProjectileManager.Instance.ShootProjectileInRing(SecondaryProjectile, transform.position, 5, 20, angle);
+            ProjectileManager.Instance.ShootProjectileInRing(Data.Secondary, transform.position, 5, 20, angle);
         if(SecondaryShot != null) SecondaryShot.Invoke();
     }
     

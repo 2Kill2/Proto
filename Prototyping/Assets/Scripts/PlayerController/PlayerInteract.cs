@@ -7,12 +7,11 @@ public class PlayerInteract : MonoBehaviour
     
     [SerializeField] LayerMask InteractibleLayers;
 
-    private bool interact;
     private Collider2D _collision;
     public void InteractInput(InputAction.CallbackContext input)
     {
         if(input.performed && _collision != null)
-            _collision.gameObject.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+            _collision.gameObject.SendMessage("Interact",gameObject ,SendMessageOptions.DontRequireReceiver);
 
     }
 
@@ -28,8 +27,5 @@ public class PlayerInteract : MonoBehaviour
             _collision = null;
 
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-       
-    }
+   
 }

@@ -4,17 +4,22 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ItemBuyObject : MonoBehaviour
 {
-    private Item StoredItem;
+    private Item _storedItem;
+
+    //Display info using item.Data
     [SerializeField] Canvas InfoDisplay;
 
     public void ItemToStore(Item item, int price)
     {
-        StoredItem = item;
+        _storedItem = item;
     }
 
-    private void Interact()
+    /// <summary>
+    /// Called when interacted by a player
+    /// </summary>
+    private void Interact(GameObject player)
     {
-        Debug.Log("Interacted");
+        //Buy logic
     }
     //Display Tooltips
     private void OnTriggerEnter2D(Collider2D collision)

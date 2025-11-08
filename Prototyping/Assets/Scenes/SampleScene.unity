@@ -582,8 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57111b66f46e8e43a8affe546d84de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrimaryProjectile: {fileID: 747675966}
-  SecondaryProjectile: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}
+  Data: {fileID: 11400000, guid: 63782afd1c3ab10439e76e2bbf3b7368, type: 2}
 --- !u!114 &1235653629
 MonoBehaviour:
   m_ObjectHideFlags: 0
