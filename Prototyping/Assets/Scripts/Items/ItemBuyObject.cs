@@ -12,7 +12,10 @@ public class ItemBuyObject : MonoBehaviour
         StoredItem = item;
     }
 
-
+    private void Interact()
+    {
+        Debug.Log("Interacted");
+    }
     //Display Tooltips
     private void OnTriggerEnter2D(Collider2D collision)
     {
