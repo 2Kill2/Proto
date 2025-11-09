@@ -1,0 +1,112 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerInput))]
+public class PlayerMovement : MonoBehaviour
+{
+    //Handles player movement and dashing
+    //Use the "Invoke Unity Events" behaviour on the player input component
+    //Call the functions in this script as unity events from the input component
+
+
+    //Fields
+    [Header("Required")]
+    [Tooltip("Rigidbody to Move")]
+    [SerializeField] Rigidbody2D RB2D;
+
+
+    [Header("Tweakable")]
+
+    [Tooltip("I dont know what the units are here")]
+    [SerializeField] float WalkSpeed;
+
+    [Tooltip("The amount of force per second while dodging")]
+    [SerializeField] float DodgeForce;
+
+    [Tooltip("The length in seconds that the player dodges for")]
+    [SerializeField] float DodgeLength;
+
+    [Tooltip("The time in seconds betweem dodges")]
+    [SerializeField] float DodgeCooldown;
+
+    //Private variables
+
+    //Toggles on when the player is recieving a move input
+    private bool _moveInput;
+
+    //What direction is to move in
+    private Vector3 _moveDirection;
+
+    //is dodge on cooldown
+    private bool _dodgeCD = true;
+
+    private void Update()
+    {
+        MovePlayer();   
+    }
+
+    /// <summary>
+    /// Takes a Vector2 Input and tells the mover where to move to
+    /// </summary>
+    /// <param name="Input">Gets extra information from the input</param>
+    public void WalkInput(InputAction.CallbackContext Input)
+    {
+        if (Input.performed)
+        {
+            _moveInput = true;
+            _moveDirection = Input.ReadValue<Vector2>();
+        }
+        else if (Input.canceled)
+        {
+            _moveInput = false;
+            return;
+        }
+    }
+
+    /// <summary>
+    /// Takes a single button or key press and calls a dodge
+    /// </summary>
+    /// <param name="Input"></param>
+    public void DodgeInput(InputAction.CallbackContext Input)
+    {
+        if(Input.performed && _dodgeCD)
+            StartCoroutine(DodgeSequence());
+
+    }
+
+    /// <summary>
+    /// Performs the dodge
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator DodgeSequence()
+    {
+        _dodgeCD = false;
+        float dodgeTime = DodgeLength;
+        Vector2 dodgeDir = _moveDirection;
+
+        while(dodgeTime > 0)
+        {
+            RB2D.linearVelocity = dodgeDir * DodgeForce/10;
+            yield return new WaitForSecondsRealtime(0.1f);
+            dodgeTime -= 0.1f;
+        }
+        RB2D.linearVelocity = Vector2.zero;
+        yield return new WaitForSecondsRealtime(DodgeCooldown);
+        _dodgeCD = true;
+    }
+
+    /// <summary>
+    /// Performs movement actions on update
+    /// </summary>
+    private void MovePlayer()
+    {
+        if (!_moveInput)
+            return;
+
+        RB2D.transform.position += _moveDirection * WalkSpeed * Time.deltaTime;
+    }
+
+}
