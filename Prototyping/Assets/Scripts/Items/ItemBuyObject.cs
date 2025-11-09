@@ -3,6 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(RectTransform))]
 public class ItemBuyObject : MonoBehaviour
 {
     [SerializeField] private ItemData StoredItem;
@@ -23,6 +24,7 @@ public class ItemBuyObject : MonoBehaviour
     {
         if (GameManager.instance.Gold < Price) return;
 
+       
 
         GameManager.instance.ChangeGold(-Price);
 

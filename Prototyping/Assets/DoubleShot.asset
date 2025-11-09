@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: 
   Icon: {fileID: 0}
   Price: 0
+  RarityWeight: 10
   TriggerEvent: 1
   TriggerPercentage: 55.4
   Projectile: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}

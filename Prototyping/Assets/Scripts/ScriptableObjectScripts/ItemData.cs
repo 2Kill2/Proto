@@ -19,6 +19,8 @@ public abstract class ItemData : ScriptableObject
     [SerializeField] private Sprite Icon;
     [SerializeField] private int Price;
 
+    [Range(1,10)]
+    [SerializeField] private float RarityWeight;
 
     [Header("Data")]
 
@@ -30,7 +32,7 @@ public abstract class ItemData : ScriptableObject
     public string description => Description;
     public Sprite Sprite => Icon;
     public int price => Price;
-
+    public float weight => RarityWeight;
     public abstract void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default);
     
 }
