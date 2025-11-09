@@ -21,17 +21,20 @@ public class Item : MonoBehaviour
     {
         switch (Data.Event)
         {
-            case(ItemData.TriggerEvents.PrimaryFire):
+            case ItemData.TriggerEvents.PrimaryFire:
                 GetComponent<PlayerShooting>().PrimaryShot += Effect;
                 break;
-            case(ItemData.TriggerEvents.SecondaryFire):
+            case ItemData.TriggerEvents.SecondaryFire:
                 GetComponent<PlayerShooting>().SecondaryShot += Effect;
                 break;
-            case(ItemData.TriggerEvents.Healed):
+            case ItemData.TriggerEvents.Healed:
                 GetComponent<Health>().Healed += Effect;
                 break;
-            case (ItemData.TriggerEvents.Damaged):
+            case ItemData.TriggerEvents.Damaged:
                 GetComponent<Health>().Damaged += Effect;
+                break;
+            case ItemData.TriggerEvents.Dashed:
+                GetComponent<PlayerMovement>().Dashed += Effect;
                 break;
         }
     }
@@ -41,10 +44,7 @@ public class Item : MonoBehaviour
     /// </summary>
     protected void Effect()
     {
-        Data.Trigger(transform.position,shooting.AimAngle);
+        Data.Trigger(transform.position,shooting.AimAngle,gameObject);
     }
     
-    
-
-
 }

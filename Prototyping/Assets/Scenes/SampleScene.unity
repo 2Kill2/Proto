@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbad2e7305b43d74991dadced16a3aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StoredItem: {fileID: 11400000, guid: dbdcca797d4683542a5574c2b087aac2, type: 2}
+  StoredItem: {fileID: 11400000, guid: bc8ddb17c15e08646ae13ef03f51e520, type: 2}
   Price: 0
   InfoDisplay: {fileID: 0}
 --- !u!61 &1981720447
@@ -1224,7 +1224,7 @@ Transform:
   m_GameObject: {fileID: 1981720445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.21, y: 1.02, z: 0}
+  m_LocalPosition: {x: -1.01, y: -2.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

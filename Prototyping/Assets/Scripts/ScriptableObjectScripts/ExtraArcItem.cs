@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemData", menuName = "Items/ExtraArcItem")]
+[CreateAssetMenu(fileName = "ItemData", menuName = "Item Styles/ExtraArcItem")]
 public class ExtraArcItem : ItemData
 {
     [Header("Extra Shot Item")]
@@ -11,7 +11,7 @@ public class ExtraArcItem : ItemData
     [SerializeField] float ArcAngle;
 
 
-    public override void Trigger(Vector3 pos = default, float rotation = default)
+    public override void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default)
     {
         bool success = Random.value < TriggerPercentage/100;
 

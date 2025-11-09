@@ -10,6 +10,7 @@ public abstract class ItemData : ScriptableObject
         SecondaryFire = 2,
         Healed = 3,
         Damaged = 4,
+        Dashed = 5
     }
 
     [Header("Item")]
@@ -30,6 +31,6 @@ public abstract class ItemData : ScriptableObject
     public Sprite Sprite => Icon;
     public int price => Price;
 
-    public abstract void Trigger(Vector3 pos = default, float rotation = default);
+    public abstract void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default);
     
 }
