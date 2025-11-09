@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemData", menuName = "Item Styles/ExtraArcItem")]
 public class ExtraArcItem : ItemData
 {
-    [Header("Extra Shot Item")]
+    [Header("ExtraArcItem")]
     [Range(1,100)]
     [SerializeField] float TriggerPercentage;
     [SerializeField] Projectile Projectile;

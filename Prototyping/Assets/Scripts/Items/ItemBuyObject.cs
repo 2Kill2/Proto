@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -20,10 +21,15 @@ public class ItemBuyObject : MonoBehaviour
     /// </summary>
     private void Interact(GameObject player)
     {
-        // if gold check passes etc
+        if (GameManager.instance.Gold < Price) return;
 
-       Item item = player.AddComponent<Item>();
+
+        GameManager.instance.ChangeGold(-Price);
+
+        Item item = player.AddComponent<Item>();
         item.Data = StoredItem;
+
+        Destroy(gameObject);
        
     }
 

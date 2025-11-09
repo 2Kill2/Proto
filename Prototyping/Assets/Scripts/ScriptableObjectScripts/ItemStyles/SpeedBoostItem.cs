@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemData", menuName = "Item Styles/SpeedBoostItem")]
 public class SpeedBoostItem : ItemData
 {
-    [Header("Extra Shot Item")]
+    [Header("SpeedBoostItem")]
     [Range(1,100)]
     [SerializeField] float TriggerPercentage;
 
