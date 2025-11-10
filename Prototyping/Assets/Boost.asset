@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a99f4c21ab01f54ab81123b24c2f7c9, type: 3}
-  m_Name: ShotBooster
+  m_Name: Boost
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Name: Boost
+  Description: hiehtiEhg
   Icon: {fileID: 0}
   Price: 0
-  RarityWeight: 10
-  TriggerEvent: 2
-  TriggerPercentage: 100
+  RarityWeight: 1
+  TriggerEvent: 1
+  TriggerPercentage: 50.5
   SpeedBoostAmount: 5
-  SpeedBoostDuration: 1
+  SpeedBoostDuration: 0.3

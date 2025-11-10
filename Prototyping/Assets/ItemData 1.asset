@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a99f4c21ab01f54ab81123b24c2f7c9, type: 3}
-  m_Name: ShotBooster
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: ItemData 1
   m_EditorClassIdentifier: 
   Name: 
   Description: 
   Icon: {fileID: 0}
   Price: 0
-  RarityWeight: 10
-  TriggerEvent: 2
-  TriggerPercentage: 100
-  SpeedBoostAmount: 5
-  SpeedBoostDuration: 1
+  RarityWeight: 1
+  TriggerEvent: 0
+  TriggerPercentage: 59.4
+  Projectile: {fileID: 0}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Table
   m_EditorClassIdentifier: 
   ItemsInTable:
-  - {fileID: 11400000, guid: 6a65454d87385ce479e9c62fe959d745, type: 2}
-  - {fileID: 11400000, guid: dbdcca797d4683542a5574c2b087aac2, type: 2}
+  - {fileID: 11400000, guid: bc8ddb17c15e08646ae13ef03f51e520, type: 2}
+  - {fileID: 11400000, guid: bc8ddb17c15e08646ae13ef03f51e520, type: 2}
   ShopSize: 10

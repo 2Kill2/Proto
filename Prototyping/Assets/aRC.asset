@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a99f4c21ab01f54ab81123b24c2f7c9, type: 3}
-  m_Name: ShotBooster
+  m_Script: {fileID: 11500000, guid: 218ec2d1ef2aa5f44a451b500b29de58, type: 3}
+  m_Name: aRC
   m_EditorClassIdentifier: 
   Name: 
   Description: 
   Icon: {fileID: 0}
   Price: 0
-  RarityWeight: 10
-  TriggerEvent: 2
+  RarityWeight: 1.66
+  TriggerEvent: 1
   TriggerPercentage: 100
-  SpeedBoostAmount: 5
-  SpeedBoostDuration: 1
+  Projectile: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}
+  ProjectileCount: 10
+  ArcAngle: 360
