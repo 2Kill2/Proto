@@ -1,7 +1,7 @@
-using NUnit.Framework;
+
 using System;
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -48,8 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     public event Action Dashed;
 
-    private float _speedBuffs;
-    private float _speedDuration;
+    
 
     private void Update()
     {
@@ -118,24 +117,30 @@ public class PlayerMovement : MonoBehaviour
         if (!_moveInput)
             return;
 
-        RB2D.transform.position += _moveDirection * (WalkSpeed * _speedBuffs) * Time.deltaTime;
+        RB2D.transform.position += _moveDirection * (WalkSpeed * _speedBuffMultiplier) * Time.deltaTime;
+
     }
 
-    public void AddSpeedBuff(float boostStrenth, float time)
+    private float _speedBuffMultiplier = 1f;
+    private float _speedBuffTimer = 0f;
+
+    public void AddSpeedBuff(float boostStrength, float duration)
     {
-        _speedDuration += time;
-        _speedBuffs += boostStrenth;
+        _speedBuffMultiplier = boostStrength;
+        _speedBuffTimer = duration;
+
     }
 
     private void SpeedBuffHandler()
     {
-        if(_speedDuration > 0)
+        if (_speedBuffTimer > 0)
         {
-            _speedDuration -= Time.deltaTime;
+            _speedBuffTimer -= Time.deltaTime;
         }
-        else if( _speedDuration <= 0)
+        else
         {
-            _speedBuffs = 1;
+            _speedBuffMultiplier = 1f;
         }
     }
+
 }

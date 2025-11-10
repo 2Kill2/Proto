@@ -7,7 +7,7 @@ public class SpeedBoostItem : ItemData
     [Range(1,100)]
     [SerializeField] float TriggerPercentage;
 
-    [Range(0,5)]
+    [Range(1,5)]
     [SerializeField] float SpeedBoostAmount;
 
     [SerializeField] float SpeedBoostDuration;
