@@ -11,7 +11,8 @@ public class ProjectileData : ScriptableObject
     [SerializeField] float Velocity;
     [SerializeField] float Spread;
     [SerializeField] float Lifetime;
-
+    [Tooltip("Vector to launch player when this is shot, is rotated around the aim angle")]
+    [SerializeField] Vector2 Recoil;
    
     [Tooltip("Shots per second")]
     [SerializeField] float Firerate;
@@ -48,6 +49,7 @@ public class ProjectileData : ScriptableObject
     public AudioClip shootAudio => ShootAudio;
     public float angle => Angle;
     public int count => Count;
+    public Vector2 recoil => Recoil;
     #endregion
 
    public enum FireMode

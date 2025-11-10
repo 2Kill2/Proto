@@ -11,7 +11,7 @@ public abstract class ItemData : ScriptableObject
         Healed = 3,
         Damaged = 4,
         Dashed = 5,
-        OnTimer = 6,
+        
     }
 
     [Header("Item")]

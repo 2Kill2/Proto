@@ -15,8 +15,9 @@ MonoBehaviour:
   NameID: Zap
   Damage: 0.5
   Velocity: 10
-  Spread: 0
-  Lifetime: 1
+  Spread: 10
+  Lifetime: 10
+  Recoil: {x: 0, y: 0}
   Firerate: 1
   Size: 0.5
   FireType: 1

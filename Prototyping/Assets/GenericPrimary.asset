@@ -17,6 +17,7 @@ MonoBehaviour:
   Velocity: 10
   Spread: 7
   Lifetime: 2
+  Recoil: {x: 0, y: -1}
   Firerate: 3
   Size: 1
   FireType: 0

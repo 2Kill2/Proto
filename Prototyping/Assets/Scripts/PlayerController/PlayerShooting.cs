@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,7 +18,12 @@ public class PlayerShooting : MonoBehaviour
     private float _secondaryCooldown;
     private bool _primaryHeld;
     private bool _secondaryHeld;
+    private Rigidbody2D _rb;
 
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         if (!_usingGamepad)
@@ -129,11 +135,26 @@ public class PlayerShooting : MonoBehaviour
             ProjectileManager.Instance.ShootProjectilesInArc(
             shot, transform.position, shot.Data.count, shot.Data.angle, AimAngle);
         }
+        if (shot.Data.recoil != Vector2.zero)
+            StartCoroutine(Recoil(shot));
+
+
     }
-  
+
+    /// <summary>
+    /// Handles recoil, if any
+    /// </summary>
+    /// <param name="shot"></param>
 
     
+    IEnumerator Recoil(Projectile shot)
+    {
+        Vector2 rotatedRecoil = Quaternion.Euler(0, 0, AimAngle + -90) * shot.Data.recoil;
+        _rb.AddForce(rotatedRecoil, ForceMode2D.Impulse);
 
+        yield return new WaitForSeconds(0.1f);
+        _rb.linearVelocity = Vector2.zero;
+    }
     private float GetMouseAngle()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
