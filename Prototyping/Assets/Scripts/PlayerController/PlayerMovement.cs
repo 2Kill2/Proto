@@ -1,4 +1,7 @@
+
+using System;
 using System.Collections;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -43,9 +46,14 @@ public class PlayerMovement : MonoBehaviour
     //is dodge on cooldown
     private bool _dodgeCD = true;
 
+    public event Action Dashed;
+
+    
+
     private void Update()
     {
-        MovePlayer();   
+        MovePlayer(); 
+        SpeedBuffHandler();
     }
 
     /// <summary>
@@ -87,6 +95,9 @@ public class PlayerMovement : MonoBehaviour
         float dodgeTime = DodgeLength;
         Vector2 dodgeDir = _moveDirection;
 
+        if (Dashed != null)
+            Dashed.Invoke();
+
         while(dodgeTime > 0)
         {
             RB2D.linearVelocity = dodgeDir * DodgeForce/10;
@@ -106,7 +117,30 @@ public class PlayerMovement : MonoBehaviour
         if (!_moveInput)
             return;
 
-        RB2D.transform.position += _moveDirection * WalkSpeed * Time.deltaTime;
+        RB2D.transform.position += _moveDirection * (WalkSpeed * _speedBuffMultiplier) * Time.deltaTime;
+
+    }
+
+    private float _speedBuffMultiplier = 1f;
+    private float _speedBuffTimer = 0f;
+
+    public void AddSpeedBuff(float boostStrength, float duration)
+    {
+        _speedBuffMultiplier = boostStrength;
+        _speedBuffTimer = duration;
+
+    }
+
+    private void SpeedBuffHandler()
+    {
+        if (_speedBuffTimer > 0)
+        {
+            _speedBuffTimer -= Time.deltaTime;
+        }
+        else
+        {
+            _speedBuffMultiplier = 1f;
+        }
     }
 
 }

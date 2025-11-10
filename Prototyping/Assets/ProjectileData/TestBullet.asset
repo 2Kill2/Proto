@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameID: Bullet
   Damage: 10
-  Velocity: 1
+  Velocity: 20
   Spread: 0
   Lifetime: 5
   Firerate: 1
   Size: 1
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  Sprite: {fileID: -4480576678929203597, guid: dd6dbf6fd000643428d4f3809e24a10a, type: 3}
   Color:
     serializedVersion: 2
-    rgba: 255
+    rgba: 4278190335
   ShootAudio: {fileID: 0}
