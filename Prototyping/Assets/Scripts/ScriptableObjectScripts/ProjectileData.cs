@@ -12,10 +12,16 @@ public class ProjectileData : ScriptableObject
     [SerializeField] float Spread;
     [SerializeField] float Lifetime;
 
+   
     [Tooltip("Shots per second")]
     [SerializeField] float Firerate;
     [SerializeField] float Size;
-    
+
+    [Header("Firing Mode Settings")]
+    [SerializeField] FireMode FireType;
+    [Header("Settings for Arc Projectiles Only")]
+    [SerializeField] int Count;
+    [SerializeField] float Angle;
 
     [Header("Visuals")]
 
@@ -38,8 +44,15 @@ public class ProjectileData : ScriptableObject
     public string nameID => NameID;
     public float size => Size;
     public float damage => Damage;
+    public FireMode fireType => FireType;
     public AudioClip shootAudio => ShootAudio;
+    public float angle => Angle;
+    public int count => Count;
     #endregion
 
-   
+   public enum FireMode
+    {
+        Single = 0,
+        Arc = 1
+    }
 }

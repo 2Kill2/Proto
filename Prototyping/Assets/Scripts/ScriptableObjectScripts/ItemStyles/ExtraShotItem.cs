@@ -3,18 +3,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemData", menuName = "Item Styles/ExtraShotItem")]
 public class ExtraShotItem : ItemData
 {
-    [Header("Extra Shot Item")]
-    [Range(1,100)]
+    [Header("ExtraShotItem")]
+    [Range(1, 100)]
     [SerializeField] float TriggerPercentage;
     [SerializeField] Projectile Projectile;
-
+    [SerializeField] int ProjectileCount;
+    [SerializeField] float ArcAngle;
 
 
     public override void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default)
     {
-        bool success = Random.value < TriggerPercentage/100;
+        bool success = Random.value < TriggerPercentage / 100;
 
         if (success)
-            ProjectileManager.Instance.ShootProjectileFromPosition(Projectile, pos, rotation);
+        {
+            switch (Projectile.Data.fireType)
+            {
+                case ProjectileData.FireMode.Single:
+                    ProjectileManager.Instance.ShootProjectileFromPosition(Projectile, pos, rotation);
+                    break;
+                case ProjectileData.FireMode.Arc:
+                    ProjectileManager.Instance.ShootProjectilesInArc(Projectile, pos, ProjectileCount, ArcAngle, rotation);
+                    break;
+            }
+        }
+
     }
 }
