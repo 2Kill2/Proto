@@ -5,12 +5,13 @@ public abstract class ItemData : ScriptableObject
 {
     public enum TriggerEvents
     {
-        Passive = 0,
+        OnPickup = 0,
         PrimaryFire = 1,
         SecondaryFire = 2,
         Healed = 3,
         Damaged = 4,
-        Dashed = 5
+        Dashed = 5,
+        OnTimer = 6,
     }
 
     [Header("Item")]

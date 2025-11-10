@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2977761712708864766}
   - component: {fileID: 4311727026875598617}
   m_Layer: 0
-  m_Name: Test
+  m_Name: Zap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afba87a217c44d4ead0e6e6a7f5e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 98f2be789aef9bb498a131cd8629a8d8, type: 2}
+  Data: {fileID: 11400000, guid: f03d2922fb4f57d45aa285e0cce6200b, type: 2}
   LayerToDamage:
     serializedVersion: 2
     m_Bits: 16

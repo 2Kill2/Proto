@@ -7,8 +7,7 @@ public class ExtraShotItem : ItemData
     [Range(1, 100)]
     [SerializeField] float TriggerPercentage;
     [SerializeField] Projectile Projectile;
-    [SerializeField] int ProjectileCount;
-    [SerializeField] float ArcAngle;
+  
 
 
     public override void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default)
@@ -23,7 +22,7 @@ public class ExtraShotItem : ItemData
                     ProjectileManager.Instance.ShootProjectileFromPosition(Projectile, pos, rotation);
                     break;
                 case ProjectileData.FireMode.Arc:
-                    ProjectileManager.Instance.ShootProjectilesInArc(Projectile, pos, ProjectileCount, ArcAngle, rotation);
+                    ProjectileManager.Instance.ShootProjectilesInArc(Projectile, pos, Projectile.Data.count, Projectile.Data.angle, rotation);
                     break;
             }
         }

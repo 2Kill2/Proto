@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
-  m_Name: DoubleShot
+  m_Name: ElectroArc
   m_EditorClassIdentifier: 
-  Name: Item
+  Name: 
   Description: 
   Icon: {fileID: 0}
   Price: 0
-  RarityWeight: 10
+  RarityWeight: 1
   TriggerEvent: 1
-  TriggerPercentage: 55.4
-  Projectile: {fileID: 4311727026875598617, guid: 27616b05f2105a1498b43834e4d69751, type: 3}
+  TriggerPercentage: 16.4
+  Projectile: {fileID: 4311727026875598617, guid: c8b80c0c9391eb143acf59944e123f16, type: 3}

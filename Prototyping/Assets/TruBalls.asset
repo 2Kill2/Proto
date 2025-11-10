@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2862bdb5a783064e9ce18bd0b6c4f05, type: 3}
-  m_Name: Warrior
+  m_Script: {fileID: 11500000, guid: 177a4c5d620376d4f9e6d9984f434695, type: 3}
+  m_Name: TruBalls
   m_EditorClassIdentifier: 
   Name: 
   Description: 
-  PrimaryFire: {fileID: 4311727026875598617, guid: fcca1c68fea1a8c4c94ae54802ac185a, type: 3}
-  SecondaryFire: {fileID: 4311727026875598617, guid: fbe7822d08aa2ef419897dfcab20a18e, type: 3}
+  Icon: {fileID: 0}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 0
+  ProjectileToEquip: {fileID: 4311727026875598617, guid: c8b80c0c9391eb143acf59944e123f16, type: 3}
+  EquipInSlot: 0
