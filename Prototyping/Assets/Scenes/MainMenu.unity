@@ -324,7 +324,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 60, y: 30}
+  m_Size: {x: 18, y: 10}
   m_EdgeRadius: 0
 --- !u!212 &426891663
 SpriteRenderer:
