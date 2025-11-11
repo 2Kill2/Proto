@@ -20,6 +20,8 @@ public class PlayerShooting : MonoBehaviour
     private bool _secondaryHeld;
     private Rigidbody2D _rb;
 
+  
+    
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
