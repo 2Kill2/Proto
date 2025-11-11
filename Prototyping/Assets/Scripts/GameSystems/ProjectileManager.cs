@@ -38,13 +38,13 @@ public class ProjectileManager : MonoBehaviour
     /// <param name="projectileCount">How many shots to fire</param>
     /// <param name="spawnRadius">Set to 360 to shoot in a full circle</param>
     /// <param name="offset">direction to shoot</param>
-    public void ShootProjectileInRing(Projectile projectile, Vector3 pos, int projectileCount, float spawnRadius, float offset)
+    public void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float spawnRadius, float offset)
     {
-        ShootProjectilesInArc(projectile, pos, projectileCount, spawnRadius,offset);
+        ShootProjectileInRing(projectile, pos, projectileCount, spawnRadius,offset);
     }
 
    
-   private void ShootProjectilesInArc(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
+   private void ShootProjectileInRing(Projectile projectile, Vector3 pos, int projectileCount, float arcAngle, float rotationOffset = 0f)
    {
         if (projectileCount <= 0) return;
 

@@ -15,6 +15,8 @@ MonoBehaviour:
   windUp: 0
   postAttack: 0
   playerTag: Player
+  trackingDuration: 4
+  trackLerpSpeed: 15
   shadowPrefab: {fileID: 6512409942513856343, guid: d3ca1f9d182f1514cb2ba583860d0cf2, type: 3}
   fallDelay: 3
   shadowScaleRange: {x: 1.2, y: 2.4}

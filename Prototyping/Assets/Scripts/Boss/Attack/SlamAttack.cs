@@ -7,6 +7,10 @@ public class SlamAttack : BossAttack
     [Header("Targeting")]
     public string playerTag = "Player";
 
+    [Header("Tracking")]
+    public float trackingDuration = 0.6f;
+    public float trackLerpSpeed = 15f;
+
     [Header("Telegraph")]
     public GameObject shadowPrefab;       // dark circle sprite prefab
     public float fallDelay = 0.8f;        // time between vanish and impact
@@ -49,14 +53,35 @@ public class SlamAttack : BossAttack
         Vector2 offscreen = new Vector2(aim.x, aim.y + vanishYOffset);
         boss.Rb.position = offscreen; // teleport up
 
-        float timer = 0f;
-        while (timer < fallDelay)
+
+        float trackEnd = Time.time + trackingDuration;
+        while (Time.time < trackEnd)
         {
-            timer += Time.deltaTime;
+            // update aim toward current player position, clamped to arena
+            t = boss.GetCurrentTarget(playerTag);
+            if (t)
+            {
+                Vector2 desired = boss.ClampInsideArena((Vector2)t.position);
+                aim = Vector2.Lerp(aim, desired, 1f - Mathf.Exp(-trackLerpSpeed * Time.deltaTime));
+            }
+
+            if (shadow) shadow.transform.position = aim;
+            yield return null;
+        }
+
+        Vector2 lockedPoint = aim;
+
+        float teleStartScale = shadow ? shadow.transform.localScale.x : shadowScaleRange.x;
+        float teleEndScale = shadowScaleRange.y;
+        float teleT = 0f;
+
+        while (teleT < fallDelay)
+        {
+            teleT += Time.deltaTime;
             // grow shadow slightly
             if (shadow)
             {
-                float k = Mathf.InverseLerp(0f, fallDelay, timer);
+                float k = Mathf.InverseLerp(0f, fallDelay, teleT);
                 float s = Mathf.Lerp(shadowScaleRange.x, shadowScaleRange.y, k);
                 shadow.transform.localScale = new Vector3(s, s, 1f);
             }
@@ -64,7 +89,7 @@ public class SlamAttack : BossAttack
         }
 
         // Impact reappear exactly at aim
-        boss.Rb.position = aim;
+        boss.Rb.position = lockedPoint;
 
         // Re-enable visuals and collision
         foreach (var r in renderers) r.enabled = true;

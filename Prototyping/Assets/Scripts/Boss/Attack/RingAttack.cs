@@ -28,7 +28,7 @@ public class RingAttack : BossAttack
         }
         else
         {
-            ProjectileManager.Instance.ShootProjectileInRing(projectilePrefab, startPos, projectileCount, 360f, angleOffset);
+            ProjectileManager.Instance.ShootProjectilesInArc(projectilePrefab, startPos, projectileCount, 360f, angleOffset);
         }
 
         if (postAttack > 0f)yield return new WaitForSeconds(postAttack);
