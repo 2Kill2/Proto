@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d8dd97c3a1697b40adfb629cbff913b, type: 3}
-  m_Name: RingAttack
+  m_Script: {fileID: 11500000, guid: b528647d279340d408b5b8c95d1e93b1, type: 3}
+  m_Name: Stage1Items
   m_EditorClassIdentifier: 
-  windUp: 0
-  postAttack: 0
-  projectileCount: 8
-  angleOffset: 0
-  spawnRadius: 0.2
-  projectilePrefab: {fileID: 6584953358291324270, guid: 56f40439546880a4e97d0940216adfd4, type: 3}
+  ItemsInTable:
+  - {fileID: 11400000, guid: 144f3e9516e8c7c4d9ea390592bc7d93, type: 2}
+  - {fileID: 11400000, guid: 144f3e9516e8c7c4d9ea390592bc7d93, type: 2}
+  ShopSize: 8

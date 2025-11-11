@@ -36,6 +36,11 @@ public class Item : MonoBehaviour
             case ItemData.TriggerEvents.Dashed:
                 GetComponent<PlayerMovement>().Dashed += Effect;
                 break;
+            case ItemData.TriggerEvents.OnPickup:
+                Effect();
+                Destroy(this);
+                break;
+           
         }
     }
 

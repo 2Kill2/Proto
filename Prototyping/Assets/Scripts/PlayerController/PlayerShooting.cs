@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +8,10 @@ public class PlayerShooting : MonoBehaviour
     public event Action PrimaryShot;
     public event Action SecondaryShot;
 
-    [SerializeField] private ClassData Data;
+    [SerializeField] GameObject AimPivotArm; 
+
+    public Projectile Primary;
+    public Projectile Secondary;
 
     public float AimAngle;
     private bool _usingGamepad;
@@ -16,13 +20,25 @@ public class PlayerShooting : MonoBehaviour
     private float _secondaryCooldown;
     private bool _primaryHeld;
     private bool _secondaryHeld;
+    private Rigidbody2D _rb;
 
+  
+    
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         if (!_usingGamepad)
             AimAngle = GetMouseAngle();
+        else if (Mouse.current.delta.ReadValue().sqrMagnitude > 0.01f)
+            _usingGamepad = false; 
+
 
         HandleFireRates();
+
+        AimPivotArm.transform.rotation = Quaternion.Euler(0,0,AimAngle);
     }
 
     private void HandleFireRates()
@@ -33,29 +49,41 @@ public class PlayerShooting : MonoBehaviour
             _secondaryCooldown -= Time.deltaTime;
 
         // Primary auto fire
-        if (_primaryHeld && _primaryCooldown <= 0 && Data.Primary.Data.firerate > 0)
-            FirePrimary();
+        if (_primaryHeld && _primaryCooldown <= 0 && Primary.Data.firerate > 0)
+        {
+            Fire(Primary);
+            _primaryCooldown = (Primary.Data.firerate > 0)
+                 ? 1f / Primary.Data.firerate : 0f;
+
+            PrimaryShot?.Invoke();
+        }
+            
 
         // Secondary auto fire
-        if (_secondaryHeld && _secondaryCooldown <= 0 && Data.Secondary.Data.firerate > 0)
-            FireSecondary();
+        if (_secondaryHeld && _secondaryCooldown <= 0 && Secondary.Data.firerate > 0)
+        {
+            Fire(Secondary);
+            _secondaryCooldown = (Secondary.Data.firerate > 0)
+       ? 1f / Secondary.Data.firerate
+       : 0f;
+
+            SecondaryShot?.Invoke();
+        }
+          
     }
 
     public void StickAim(InputAction.CallbackContext input)
     {
         Vector2 direction = input.ReadValue<Vector2>();
 
-        if (direction.sqrMagnitude > 0.01f)
+        if (direction.sqrMagnitude > 0.04f) // slightly larger deadzone
         {
             _usingGamepad = true;
             AimAngle = DirectionToAngle(direction);
         }
-        else
-        {
-            _usingGamepad = false;
-        }
-    }
 
+
+    }
     public void ShootInputPrimary(InputAction.CallbackContext input)
     {
         if (input.started)
@@ -66,8 +94,17 @@ public class PlayerShooting : MonoBehaviour
         if (!input.performed)
             return;
 
-        if (Data.Primary.Data.firerate <= 0)
-            FirePrimary();
+        if (Primary.Data.firerate <= 0)
+        {
+            Fire(Primary);
+            _primaryCooldown = (Primary.Data.firerate > 0)
+                 ? 1f / Primary.Data.firerate : 0f;
+
+            PrimaryShot?.Invoke();
+        }
+           
+
+     
     }
 
     public void ShootInputSecondary(InputAction.CallbackContext input)
@@ -80,34 +117,50 @@ public class PlayerShooting : MonoBehaviour
         if (!input.performed)
             return;
 
-        if (Data.Secondary.Data.firerate <= 0)
-            FireSecondary();
+        if (Secondary.Data.firerate <= 0)
+        {
+            Fire(Secondary);
+            _secondaryCooldown = (Secondary.Data.firerate > 0)
+         ? 1f / Secondary.Data.firerate
+         : 0f;
+
+            SecondaryShot?.Invoke();
+        }
+           
     }
 
-    private void FirePrimary()
+    private void Fire(Projectile shot)
     {
-        ProjectileManager.Instance.ShootProjectileFromPosition(
-            Data.Primary, transform.position, AimAngle);
+        if (shot.Data.fireType == ProjectileData.FireMode.Single)
+        {
+            ProjectileManager.Instance.ShootProjectileFromPosition(
+            shot, transform.position, AimAngle);
+        }
+        else
+        {
+            ProjectileManager.Instance.ShootProjectilesInArc(
+            shot, transform.position, shot.Data.count, shot.Data.angle, AimAngle);
+        }
+        if (shot.Data.recoil != Vector2.zero)
+            StartCoroutine(Recoil(shot));
 
-        _primaryCooldown = (Data.Primary.Data.firerate > 0)
-            ? 1f / Data.Primary.Data.firerate
-            : 0f;
 
-        PrimaryShot?.Invoke();
     }
 
-    private void FireSecondary()
+    /// <summary>
+    /// Handles recoil, if any
+    /// </summary>
+    /// <param name="shot"></param>
+
+    
+    IEnumerator Recoil(Projectile shot)
     {
-        ProjectileManager.Instance.ShootProjectilesInArc(
-            Data.Secondary, transform.position, 5, 20, AimAngle);
+        Vector2 rotatedRecoil = Quaternion.Euler(0, 0, AimAngle + -90) * shot.Data.recoil;
+        _rb.AddForce(rotatedRecoil, ForceMode2D.Impulse);
 
-        _secondaryCooldown = (Data.Secondary.Data.firerate > 0)
-            ? 1f / Data.Secondary.Data.firerate
-            : 0f;
-
-        SecondaryShot?.Invoke();
+        yield return new WaitForSeconds(0.1f);
+        _rb.linearVelocity = Vector2.zero;
     }
-
     private float GetMouseAngle()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

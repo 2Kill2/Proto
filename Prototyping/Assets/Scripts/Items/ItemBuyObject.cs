@@ -1,5 +1,8 @@
 
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -7,14 +10,28 @@ using UnityEngine;
 public class ItemBuyObject : MonoBehaviour
 {
     [SerializeField] private ItemData StoredItem;
-    [SerializeField] private int Price;
+    private int Price;
+
+
+    [Header("UI")]
+   
     //Display info using item.Data
     [SerializeField] Canvas InfoDisplay;
+    [SerializeField] TextMeshProUGUI DescriptionText;
+    [SerializeField] TextMeshProUGUI NameText;
+    [SerializeField] TextMeshProUGUI PriceText;
+    [SerializeField] Image IconImage;
 
     public void ItemToStore(ItemData item)
     {
         StoredItem = item;
         Price = item.price;
+
+        //DescriptionText.text = item.description;
+        //NameText.text = item.name;
+        //PriceText.text = Price.ToString() + " Gold";
+
+        //IconImage = item.ItemIcon;
     }
 
     /// <summary>

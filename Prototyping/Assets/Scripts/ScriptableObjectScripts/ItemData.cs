@@ -1,22 +1,23 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public abstract class ItemData : ScriptableObject
 {
     public enum TriggerEvents
     {
-        Passive = 0,
+        OnPickup = 0,
         PrimaryFire = 1,
         SecondaryFire = 2,
         Healed = 3,
         Damaged = 4,
-        Dashed = 5
+        Dashed = 5,
+        
     }
 
     [Header("Item")]
     [SerializeField] private string Name;
     [SerializeField] private string Description;
-    [SerializeField] private Sprite Icon;
+    [SerializeField] private Image Icon;
     [SerializeField] private int Price;
 
     [Range(1,10)]
@@ -30,7 +31,7 @@ public abstract class ItemData : ScriptableObject
     public TriggerEvents Event => TriggerEvent;
     public string itemName => Name;
     public string description => Description;
-    public Sprite Sprite => Icon;
+    public Image ItemIcon => Icon;
     public int price => Price;
     public float weight => RarityWeight;
     public abstract void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default);

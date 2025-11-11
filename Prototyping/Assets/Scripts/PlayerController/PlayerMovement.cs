@@ -1,11 +1,10 @@
 
 using System;
 using System.Collections;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
@@ -19,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Required")]
     [Tooltip("Rigidbody to Move")]
     [SerializeField] Rigidbody2D RB2D;
-
+    [SerializeField] Animator PlayerAnimator;
 
     [Header("Tweakable")]
 
@@ -48,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
     public event Action Dashed;
 
+    [Header("PermanentBoosts")]
+    public float MoveSpeedBoost = 0;
+    public float DashCDReduction = 1;
     
 
     private void Update()
@@ -105,7 +107,8 @@ public class PlayerMovement : MonoBehaviour
             dodgeTime -= 0.1f;
         }
         RB2D.linearVelocity = Vector2.zero;
-        yield return new WaitForSecondsRealtime(DodgeCooldown);
+        yield return new WaitForSecondsRealtime(DodgeCooldown * (1 - DashCDReduction / 100f));
+
         _dodgeCD = true;
     }
 
@@ -117,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_moveInput)
             return;
 
-        RB2D.transform.position += _moveDirection * (WalkSpeed * _speedBuffMultiplier) * Time.deltaTime;
+        RB2D.transform.position += _moveDirection * ((WalkSpeed + MoveSpeedBoost) * _speedBuffMultiplier) * Time.deltaTime;
 
     }
 
