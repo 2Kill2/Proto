@@ -108,7 +108,8 @@ public class PlayerMovement : MonoBehaviour
             dodgeTime -= 0.1f;
         }
         RB2D.linearVelocity = Vector2.zero;
-        yield return new WaitForSecondsRealtime(DodgeCooldown * DashCDReduction);
+        yield return new WaitForSecondsRealtime(DodgeCooldown * (1 - DashCDReduction / 100f));
+
         _dodgeCD = true;
     }
 

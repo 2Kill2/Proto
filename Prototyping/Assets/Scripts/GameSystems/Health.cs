@@ -9,13 +9,16 @@ public class Health : MonoBehaviour
     public event Action Healed;
 
     [SerializeField] float StartingHealth;
+    [SerializeField] float MaxHealth;
     public float CurrentHealth 
     { 
         get => _health;
         set
         {
             _health = value;
-           
+            _health = Mathf.Clamp(value, 0, MaxHealth + BonusMaxHealth);
+
+
             CheckState();
         }
     }
@@ -25,6 +28,10 @@ public class Health : MonoBehaviour
 
     [SerializeField] UnityEvent Dead;
 
+    public float BonusMaxHealth;
+    public float DamageReduction;
+
+
     private void Awake()
     {
         RefillHealth();
@@ -33,7 +40,7 @@ public class Health : MonoBehaviour
     //Call these functions using Send Message 
     private void Damage(float Amount)
     {
-        CurrentHealth -= Amount;
+        CurrentHealth -= Amount - DamageReduction;
         if(Damaged != null) Damaged.Invoke();
     }
     private void Heal(float Amount) 

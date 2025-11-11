@@ -38,6 +38,7 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.TriggerEvents.OnPickup:
                 Effect();
+                Destroy(this);
                 break;
            
         }

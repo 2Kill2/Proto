@@ -8,6 +8,8 @@ public class PlayerShooting : MonoBehaviour
     public event Action PrimaryShot;
     public event Action SecondaryShot;
 
+    [SerializeField] GameObject AimPivotArm; 
+
     public Projectile Primary;
     public Projectile Secondary;
 
@@ -32,6 +34,8 @@ public class PlayerShooting : MonoBehaviour
             AimAngle = GetMouseAngle();
 
         HandleFireRates();
+
+        AimPivotArm.transform.rotation = Quaternion.Euler(0,0,AimAngle);
     }
 
     private void HandleFireRates()
