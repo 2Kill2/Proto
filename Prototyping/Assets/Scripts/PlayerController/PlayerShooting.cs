@@ -32,6 +32,9 @@ public class PlayerShooting : MonoBehaviour
     {
         if (!_usingGamepad)
             AimAngle = GetMouseAngle();
+        else if (Mouse.current.delta.ReadValue().sqrMagnitude > 0.01f)
+            _usingGamepad = false; 
+
 
         HandleFireRates();
 
@@ -73,17 +76,14 @@ public class PlayerShooting : MonoBehaviour
     {
         Vector2 direction = input.ReadValue<Vector2>();
 
-        if (direction.sqrMagnitude > 0.01f)
+        if (direction.sqrMagnitude > 0.04f) // slightly larger deadzone
         {
             _usingGamepad = true;
             AimAngle = DirectionToAngle(direction);
         }
-        else
-        {
-            _usingGamepad = false;
-        }
-    }
 
+
+    }
     public void ShootInputPrimary(InputAction.CallbackContext input)
     {
         if (input.started)

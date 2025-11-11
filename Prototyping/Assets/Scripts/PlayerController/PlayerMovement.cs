@@ -1,11 +1,10 @@
 
 using System;
 using System.Collections;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
@@ -19,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Required")]
     [Tooltip("Rigidbody to Move")]
     [SerializeField] Rigidbody2D RB2D;
-
+    [SerializeField] Animator PlayerAnimator;
 
     [Header("Tweakable")]
 

@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
 
     private void CheckState()
     {
-        if(_health < 0)
+        if(_health == 0)
         {
             Dead.Invoke();
         }

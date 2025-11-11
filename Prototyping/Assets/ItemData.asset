@@ -18,5 +18,5 @@ MonoBehaviour:
   Price: 0
   RarityWeight: 1
   TriggerEvent: 0
-  UpgradeStat: 0
-  Amount: 0
+  UpgradeStat: 2
+  Amount: 20
