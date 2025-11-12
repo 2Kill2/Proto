@@ -24,6 +24,7 @@ public class BossVisuals : MonoBehaviour
         Vector2 pos = boss.Rb.position;
         float speed = ((pos - lastPos).magnitude) / Mathf.Max(Time.deltaTime, 0.0001f);
         anim.SetFloat("Speed", speed);
+        anim.SetBool("IsMoving", speed > 0.05f);
 
         float dx = pos.x - lastPos.x;
         if (Mathf.Abs(dx) > faceThreshold && gfx)
@@ -38,7 +39,9 @@ public class BossVisuals : MonoBehaviour
 
     public void SetTracking(bool v) { if (anim) anim.SetBool("IsTracking", v); }
     public void SetTelegraph(bool v) { if (anim) anim.SetBool("IsTelegraph", v); }
+    public void SetMoving(bool v) { if (anim) anim.SetBool("IsMoving", v); }
     public void TriggerImpact() { if (anim) anim.SetTrigger("DoImpact"); }
+    public void TriggerCast() { if (anim) anim.SetTrigger("Cast"); }
     public void TriggerHurt() { if (anim) anim.SetTrigger("Hurt"); }
     public void TriggerDeath() { if (anim) anim.SetTrigger("Dead"); }
 

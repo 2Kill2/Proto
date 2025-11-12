@@ -54,6 +54,10 @@ public abstract class BossBase : MonoBehaviour
     {
         if (!isAlive) return;
         currentHP -= Mathf.Max(0, dmg);
+
+        var vis = GetComponent<BossVisuals>();
+        vis?.TriggerHurt();
+
         if (currentHP <= 0) Die();
     }
 
@@ -61,7 +65,10 @@ public abstract class BossBase : MonoBehaviour
     {
         isAlive = false;
         StopAllCoroutines();
-        // Need to play death animation/effects
+
+        var vis = GetComponent<BossVisuals>();
+        vis?.TriggerDeath();
+
         gameObject.SetActive(false);
     }
 

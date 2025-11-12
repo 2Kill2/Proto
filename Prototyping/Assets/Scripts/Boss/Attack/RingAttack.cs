@@ -9,12 +9,16 @@ public class RingAttack : BossAttack
     //To rotate ring pattern
     public float angleOffset = 0f;
     public float spawnRadius = 0.2f;
+
     [Header("Projectile")]
     public Projectile projectilePrefab;
 
     public override IEnumerator Execute(BossBase boss)
     {
         if(windUp > 0f) yield return new WaitForSeconds(windUp);
+
+        var vis = boss.GetComponent<BossVisuals>();
+        vis?.SetTelegraph(true);
 
         Vector2 origin = boss.ProjectileOrigin != null 
             ? (Vector2)boss.ProjectileOrigin.position 
@@ -29,8 +33,10 @@ public class RingAttack : BossAttack
         else
         {
             ProjectileManager.Instance.ShootProjectilesInArc(projectilePrefab, startPos, projectileCount, 360f, angleOffset);
+            vis?.TriggerCast();
         }
 
+        vis?.SetTelegraph(false);
         if (postAttack > 0f)yield return new WaitForSeconds(postAttack);
     }
 }

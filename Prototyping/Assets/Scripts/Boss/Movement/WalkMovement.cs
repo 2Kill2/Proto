@@ -15,6 +15,9 @@ public class WalkMovement : BossMovement
     {
         if (windUp > 0f) yield return new WaitForSeconds(windUp);
 
+        var vis = boss.GetComponent<BossVisuals>();
+        vis?.SetMoving(true);
+
         float endAt = Time.time + Mathf.Max(0.4f, maxDuration);
 
         while (Time.time < endAt)
@@ -37,6 +40,7 @@ public class WalkMovement : BossMovement
             yield return new WaitForFixedUpdate();
         }
 
+        vis?.SetMoving(false);
         if (postAttack > 0f) yield return new WaitForSeconds(postAttack);
     }
 }
