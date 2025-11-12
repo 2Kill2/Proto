@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7441216157937990767}
   - component: {fileID: 6692131889449380109}
   - component: {fileID: 9161207754806204261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Thing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,5 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoredItem: {fileID: 0}
-  Price: 0
   InfoDisplay: {fileID: 0}
+  DescriptionText: {fileID: 0}
+  NameText: {fileID: 0}
+  PriceText: {fileID: 0}
+  IconImage: {fileID: 0}
