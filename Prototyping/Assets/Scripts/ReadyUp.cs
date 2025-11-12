@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ReadyUp : MonoBehaviour
@@ -7,8 +8,10 @@ public class ReadyUp : MonoBehaviour
 
     [SerializeField] GameObject SlimeKing;
     [SerializeField] GameObject Cam;
-    private bool db = false;
+    [SerializeField] TextMeshProUGUI Label;
 
+    public string targetTag = "Player";
+    private bool db = false;
     private HashSet<GameObject> touchingObjects = new HashSet<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +35,9 @@ public class ReadyUp : MonoBehaviour
 
     private void Update()
     {
-        if (touchingObjects.Count == 1&&db==false)
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
+        Label.text = touchingObjects.Count+"/"+taggedObjects.Length;
+        if (touchingObjects.Count > 0 && touchingObjects.Count == taggedObjects.Length && db==false)
         {
             db = true;
             MoveUp();

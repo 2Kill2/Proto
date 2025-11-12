@@ -27,6 +27,7 @@ public class ItemBuyObject : MonoBehaviour
         StoredItem = item;
         Price = item.price;
 
+
         //DescriptionText.text = item.description;
         //NameText.text = item.name;
         //PriceText.text = Price.ToString() + " Gold";
@@ -41,8 +42,8 @@ public class ItemBuyObject : MonoBehaviour
     {
         if (GameManager.instance.Gold < Price) return;
 
-       
 
+        Debug.Log("interact");
         GameManager.instance.ChangeGold(-Price);
 
         Item item = player.AddComponent<Item>();
@@ -55,10 +56,12 @@ public class ItemBuyObject : MonoBehaviour
     //Display Tooltips
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        InfoDisplay.enabled = true;
+        //InfoDisplay.enabled = true;
+        Debug.Log("enter trigger");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InfoDisplay.enabled = false;
+        //InfoDisplay.enabled = false;
+        Debug.Log("exit trigger");
     }
 }

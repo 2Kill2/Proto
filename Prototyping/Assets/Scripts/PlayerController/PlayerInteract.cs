@@ -12,7 +12,6 @@ public class PlayerInteract : MonoBehaviour
     {
         if(input.performed && _collision != null)
             _collision.gameObject.SendMessage("Interact",gameObject ,SendMessageOptions.DontRequireReceiver);
-
     }
 
 
