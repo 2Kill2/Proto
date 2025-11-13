@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Health : MonoBehaviour
 
     [SerializeField] float StartingHealth;
     [SerializeField] float MaxHealth;
+
+    [SerializeField] Slider HealthBar;
     public float CurrentHealth 
     { 
         get => _health;
@@ -34,6 +37,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        
         RefillHealth();
     }
 
@@ -52,6 +56,8 @@ public class Health : MonoBehaviour
 
     private void CheckState()
     {
+        HealthBar.value = CurrentHealth/MaxHealth * 100;
+
         if(_health == 0)
         {
             Dead.Invoke();
