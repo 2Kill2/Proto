@@ -153,8 +153,8 @@ Transform:
   m_GameObject: {fileID: 2665370547671504092}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.26767, y: 0, z: 0}
+  m_LocalScale: {x: 0.55806, y: 0.55806, z: 0.55806}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4432823867136239118}
@@ -324,7 +324,19 @@ MonoBehaviour:
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8669174971125105182}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: DodgeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 641cd816-40e6-41b4-8c3d-04687c349290
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
@@ -402,10 +414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB2D: {fileID: 3113196763871929718}
   PlayerAnimator: {fileID: 0}
-  WalkSpeed: 2
-  DodgeForce: 2
-  DodgeLength: 2
-  DodgeCooldown: 2
+  WalkSpeed: 5
+  DodgeForce: 300
+  DodgeLength: 0.1
+  DodgeCooldown: 1
   MoveSpeedBoost: 0
   DashCDReduction: 1
 --- !u!114 &6628929090430815465
