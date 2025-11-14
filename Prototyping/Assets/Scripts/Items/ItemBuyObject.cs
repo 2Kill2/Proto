@@ -28,11 +28,11 @@ public class ItemBuyObject : MonoBehaviour
         Price = item.price;
 
 
-        //DescriptionText.text = item.description;
-        //NameText.text = item.name;
-        //PriceText.text = Price.ToString() + " Gold";
+        DescriptionText.text = item.description;
+        NameText.text = item.name;
+        PriceText.text = Price.ToString() + " Gold";
 
-        //IconImage = item.ItemIcon;
+        IconImage = item.ItemIcon;
     }
 
     /// <summary>
@@ -56,12 +56,10 @@ public class ItemBuyObject : MonoBehaviour
     //Display Tooltips
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //InfoDisplay.enabled = true;
-        Debug.Log("enter trigger");
+        InfoDisplay.enabled = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //InfoDisplay.enabled = false;
-        Debug.Log("exit trigger");
+        InfoDisplay.enabled = false;
     }
 }
