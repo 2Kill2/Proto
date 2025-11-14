@@ -55,11 +55,11 @@ public class Projectile : MonoBehaviour
     private void CheckForHit()
     {
         // Calculate movement distance this frame
-        float distance = Data.velocity * Time.deltaTime;
+        float distance = 0.1f;
         Vector2 direction = transform.right; // local forward
 
         // CircleCast for hits
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, Data.size / 2f, direction, distance, LayerToDamage);
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, Data.size * 0.2f, direction, distance, LayerToDamage);
         if (hit.collider != null)
         {
           
