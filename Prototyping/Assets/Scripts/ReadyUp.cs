@@ -13,6 +13,7 @@ public class ReadyUp : MonoBehaviour
     public string targetTag = "Player";
     private bool db = false;
     private HashSet<GameObject> touchingObjects = new HashSet<GameObject>();
+    private GameObject[] taggedObjects;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,7 +27,6 @@ public class ReadyUp : MonoBehaviour
 
     }
 
-
     // You can call this method to get the current count of touching objects
     public int GetTouchingObjectCount()
     {
@@ -35,7 +35,7 @@ public class ReadyUp : MonoBehaviour
 
     private void Update()
     {
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
+        taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
         Label.text = touchingObjects.Count+"/"+taggedObjects.Length;
         if (touchingObjects.Count > 0 && touchingObjects.Count == taggedObjects.Length && db==false)
         {
@@ -48,5 +48,9 @@ public class ReadyUp : MonoBehaviour
     {
         SlimeKing.gameObject.SetActive(true);
         Cam.transform.position = new Vector3(0,10,-10);
+        foreach (GameObject obj in taggedObjects)
+        {
+            obj.transform.position = new Vector3(0, 6, 0);
+        }
     }
 }
