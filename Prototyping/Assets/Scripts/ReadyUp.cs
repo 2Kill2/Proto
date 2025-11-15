@@ -46,11 +46,11 @@ public class ReadyUp : MonoBehaviour
 
     private void MoveUp()
     {
-        SlimeKing.gameObject.SetActive(true);
+        SlimeKing.gameObject.SetActive(true); 
         Cam.transform.position = new Vector3(0,10,-10);
         foreach (GameObject obj in taggedObjects)
         {
-            obj.transform.position = new Vector3(0, 6, 0);
+            obj.transform.position = new Vector3(0, 6, 0); //MODULARIZE :eyes: 
         }
     }
 }
