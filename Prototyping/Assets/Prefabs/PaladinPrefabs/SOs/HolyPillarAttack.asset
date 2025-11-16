@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94184e38b3ca2744a5f2a82b8f3dd83, type: 3}
+  m_Name: HolyPillarAttack
+  m_EditorClassIdentifier: 
+  windUp: 0
+  postAttack: 0
+  pillarCount: 6
+  minSeparation: 1.5
+  wallPadding: 0.6
+  maxGlobalAttempts: 2000
+  telegraphPrefab: {fileID: 3142549489049608683, guid: b7fd2d83c44164e4bb599916bd4bffae, type: 3}
+  telegraphTime: 1.8
+  pillarProjectilePrefab: {fileID: 0}
+  useAnimatorCues: 1

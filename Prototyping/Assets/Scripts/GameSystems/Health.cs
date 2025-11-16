@@ -56,7 +56,8 @@ public class Health : MonoBehaviour
 
     private void CheckState()
     {
-        HealthBar.value = CurrentHealth/MaxHealth * 100;
+        if (HealthBar != null)
+            HealthBar.value = CurrentHealth/MaxHealth * 100;
 
         if(_health == 0)
         {

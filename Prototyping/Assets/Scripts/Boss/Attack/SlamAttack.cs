@@ -23,16 +23,21 @@ public class SlamAttack : BossAttack
 
     [Header("Vanish")]
     public float vanishYOffset = 6f;      // visual “jump up” height
-    public bool makeInvulnerableWhileHidden = true;
+    [Tooltip("If true, temporarily hide GFX using BossVisuals while vanished (jumped up).")]
+    public bool hideGfxWhileVanished = true;
 
     public override IEnumerator Execute(BossBase boss)
     {
         if (windUp > 0f) yield return new WaitForSeconds(windUp);
 
+        var vis = boss.GetComponent<BossVisuals>();
+
         // Pick a target point (nearest player or random) and clamp to arena
         Transform t = boss.GetCurrentTarget(playerTag);
         Vector2 aim = t ? (Vector2)t.position : boss.RandomPointInsideArena();
         aim = boss.ClampInsideArena(aim);
+
+        vis?.SetTelegraph(true);
 
         // Spawn shadow
         GameObject shadow = null;
@@ -42,19 +47,26 @@ public class SlamAttack : BossAttack
             shadow.transform.localScale = Vector3.one * shadowScaleRange.x;
         }
 
-        // Hide boss visuals & collision, move it “up”
-        var renderers = boss.GetComponentsInChildren<Renderer>(true);
-        var col = boss.GetComponent<Collider2D>();
-        var prevColEnabled = col ? col.enabled : false;
-        if (col) col.enabled = false;
+        Renderer[] hiddenRenders = null;
+        if (hideGfxWhileVanished)
+        {
+            if (vis != null)
+            {
+                vis.SetHidden(true);
+            }
+            else
+            {
+                hiddenRenders = boss.GetComponentsInChildren<Renderer>(true);
+                foreach (var r in hiddenRenders) r.enabled = false;
+            }
+        }
 
-        foreach (var r in renderers) r.enabled = false;
+        boss.Rb.position = new Vector2(aim.x, aim.y + vanishYOffset);
 
-        Vector2 offscreen = new Vector2(aim.x, aim.y + vanishYOffset);
-        boss.Rb.position = offscreen; // teleport up
-
-
+        // TRACK phase (follow target while “in air”)
+        vis?.SetTracking(true);
         float trackEnd = Time.time + trackingDuration;
+
         while (Time.time < trackEnd)
         {
             // update aim toward current player position, clamped to arena
@@ -68,13 +80,11 @@ public class SlamAttack : BossAttack
             if (shadow) shadow.transform.position = aim;
             yield return null;
         }
+        vis?.SetTracking(false);
 
         Vector2 lockedPoint = aim;
 
-        float teleStartScale = shadow ? shadow.transform.localScale.x : shadowScaleRange.x;
-        float teleEndScale = shadowScaleRange.y;
         float teleT = 0f;
-
         while (teleT < fallDelay)
         {
             teleT += Time.deltaTime;
@@ -84,6 +94,7 @@ public class SlamAttack : BossAttack
                 float k = Mathf.InverseLerp(0f, fallDelay, teleT);
                 float s = Mathf.Lerp(shadowScaleRange.x, shadowScaleRange.y, k);
                 shadow.transform.localScale = new Vector3(s, s, 1f);
+                shadow.transform.position = lockedPoint;
             }
             yield return null;
         }
@@ -91,9 +102,20 @@ public class SlamAttack : BossAttack
         // Impact reappear exactly at aim
         boss.Rb.position = lockedPoint;
 
-        // Re-enable visuals and collision
-        foreach (var r in renderers) r.enabled = true;
-        if (col) col.enabled = prevColEnabled;
+        if (hideGfxWhileVanished)
+        {
+            if (vis != null)
+            {
+                vis.SetHidden(false);
+            }
+            else if (hiddenRenders != null)
+            {
+                foreach (var r in hiddenRenders) r.enabled = true;
+            }
+        }
+
+        vis?.TriggerImpact();
+        vis?.SetTelegraph(false);
 
         // Remove shadow
         if (shadow) Object.Destroy(shadow);
@@ -104,17 +126,10 @@ public class SlamAttack : BossAttack
             var hits = Physics2D.OverlapCircleAll(aim, slamRadius, playerMask);
             foreach (var h in hits)
             {
-                var dmg = h.GetComponent<IDamageable>();
-                if (dmg != null) dmg.TakeDamage(slamDamage);
-                // Player Damage here
+                h.gameObject.SendMessage("Damage", slamDamage, SendMessageOptions.DontRequireReceiver);
             }
         }
 
         if (postAttack > 0f) yield return new WaitForSeconds(postAttack);
     }
-}
-
-public interface IDamageable
-{
-    void TakeDamage(int amount);
 }

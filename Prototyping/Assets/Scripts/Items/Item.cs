@@ -8,8 +8,9 @@ public class Item : MonoBehaviour
     private PlayerShooting shooting;
     private void Start()
     {
-
+        gameObject.SendMessage("AddItem", Data);
         shooting = GetComponent<PlayerShooting>();
+       
         AssignToEvent();
     }
    
@@ -38,7 +39,7 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.TriggerEvents.OnPickup:
                 Effect();
-                Destroy(this);
+                
                 break;
            
         }

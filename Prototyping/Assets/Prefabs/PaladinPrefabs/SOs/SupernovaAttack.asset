@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d99d03f499fd2d45a24cd70ad50d146, type: 3}
+  m_Name: SupernovaAttack
+  m_EditorClassIdentifier: 
+  windUp: 0
+  postAttack: 0
+  requireHpThreshold: 0
+  hpThresholdPercent: 0.5
+  preJumpWindup: 0.4
+  jumpHangTime: 0.4
+  rockPrefab: {fileID: 1221599195920005490, guid: 205e944a0e60cfa45901c4e330f13b08, type: 3}
+  rockCount: 8
+  rockRadius: 3.5
+  blastTelegraphPrefab: {fileID: 4610561516868120003, guid: 1b8850cd989feee4a854bbba3516bd5b, type: 3}
+  blastTelegraphTime: 5
+  blastRadius: 10
+  explosionPrefab: {fileID: 7735474510415840376, guid: 9699db23446c77c49b662effdc638f49, type: 3}
+  explosionVfxDuration: 5
+  blastDamage: 15
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 512
