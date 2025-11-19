@@ -264,7 +264,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6144468681439357480, guid: 685910f4f5b5551438466b0a038cfb87, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -272,7 +272,7 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6616958840770754906
@@ -312,8 +312,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.82, y: 1.22}
+    pivot: {x: 0.5, y: -0.23809524}
+    oldSize: {x: 0.42, y: 0.42}
     newSize: {x: 0.82, y: 1.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
   DescriptionText: {fileID: 1767395264752561884}
   NameText: {fileID: 2907385806771828064}
   PriceText: {fileID: 4083042191700973968}
-  IconImage: {fileID: 3895878446897582900}
+  IconImage: {fileID: -6075399337016010805, guid: d3f3abd7fa49fb34d8973f9c4268e225, type: 3}
 --- !u!1 &5128555973529746569
 GameObject:
   m_ObjectHideFlags: 0

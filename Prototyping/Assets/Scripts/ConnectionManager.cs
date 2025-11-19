@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
+using UnityEngine.UI;
 
 public class ConnectionManager : MonoBehaviour
 {
@@ -19,26 +21,38 @@ public class ConnectionManager : MonoBehaviour
 
     public void OnPlayerJoin()
     {
-        PlayerCount++;
-        GameObject.Find("PlayerObject(Clone)").name = "Player"+ PlayerCount;
-        switch (PlayerCount)
+        if (GameObject.Find("PlayerObject(Clone)"))
         {
-            case 1:
-                GameObject.Find("Player1").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p1Sprite;
-                p1Hud.SetActive(true);
-            break;
-            case 2:
-                GameObject.Find("Player2").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p2Sprite;
-                p2Hud.SetActive(true);
-            break;
-            case 3:
-                GameObject.Find("Player3").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p3Sprite;
-                p3Hud.SetActive(true);
-            break;
-            case 4:
-                GameObject.Find("Player4").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p4Sprite;
-                p4Hud.SetActive(true);
-            break;
+            PlayerCount += 1;
+            Debug.Log("OnPlayerJoin is being called... " + PlayerCount);
+            GameObject.Find("PlayerObject(Clone)").name = "Player" + PlayerCount;
+            switch (PlayerCount)
+            {
+                case 1:
+                    GameObject.Find("Player1").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p1Sprite;
+                    GameObject.Find("Player1").GetComponent<Health>().HealthBar = p1Hud.transform.Find("Slider").GetComponent<Slider>();
+                    GameObject.Find("Player1").GetComponent<PlayerItemUI>().PlayerUI = p1Hud.transform.Find("Grid").gameObject;
+                    p1Hud.SetActive(true);
+                    break;
+                case 2:
+                    GameObject.Find("Player2").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p2Sprite;
+                    GameObject.Find("Player2").GetComponent<Health>().HealthBar = p2Hud.transform.Find("Slider").GetComponent<Slider>();
+                    GameObject.Find("Player2").GetComponent<PlayerItemUI>().PlayerUI = p2Hud.transform.Find("Grid").gameObject;
+                    p2Hud.SetActive(true);
+                    break;
+                case 3:
+                    GameObject.Find("Player3").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p3Sprite;
+                    GameObject.Find("Player3").GetComponent<Health>().HealthBar = p3Hud.transform.Find("Slider").GetComponent<Slider>();
+                    GameObject.Find("Player3").GetComponent<PlayerItemUI>().PlayerUI = p3Hud.transform.Find("Grid").gameObject;
+                    p3Hud.SetActive(true);
+                    break;
+                case 4:
+                    GameObject.Find("Player4").transform.Find("Ps").GetComponent<SpriteRenderer>().sprite = p4Sprite;
+                    GameObject.Find("Player4").GetComponent<Health>().HealthBar = p4Hud.transform.Find("Slider").GetComponent<Slider>();
+                    GameObject.Find("Player4").GetComponent<PlayerItemUI>().PlayerUI = p4Hud.transform.Find("Grid").gameObject;
+                    p4Hud.SetActive(true);
+                    break;
+            }
         }
     }
 

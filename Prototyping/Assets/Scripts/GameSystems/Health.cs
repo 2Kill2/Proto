@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] float StartingHealth;
     [SerializeField] float MaxHealth;
 
-    [SerializeField] Slider HealthBar;
+    [SerializeField] public Slider HealthBar;
     public float CurrentHealth 
     { 
         get => _health;
@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
     private float _health;
 
 
-    [SerializeField] UnityEvent Dead;
+    [SerializeField] UnityEvent<GameObject> Dead;
 
     public float BonusMaxHealth;
     public float DamageReduction;
@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
 
         if(_health == 0)
         {
-            Dead.Invoke();
+            Dead.Invoke(gameObject);
         }
     }
 

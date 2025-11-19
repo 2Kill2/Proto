@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerItemUI : MonoBehaviour
 {
     [Tooltip("The parent object that holds all item icons")]
-    [SerializeField] GameObject PlayerUI;
+    [SerializeField] public GameObject PlayerUI;
 
     [SerializeField] ItemIcon EmptyItemPrefab;
 
@@ -38,7 +38,7 @@ public class PlayerItemUI : MonoBehaviour
 
         // Assign visual data
         if (icon.Icon != null)
-            icon.Icon = data.ItemIcon;
+            icon.Icon.sprite = data.ItemIcon;
 
         if (icon.Count != null)
             icon.Count.text = amount.ToString();

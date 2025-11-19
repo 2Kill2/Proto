@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4432823867136239118}
   - component: {fileID: 4819719569262674074}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4056990045442704955, guid: 57f2a39b3b2d4234ba4f21d08ab42575, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 8669174971125105182}
   - component: {fileID: 6628929090430815465}
   - component: {fileID: -6873182900277967905}
-  - component: {fileID: -1633116217912177972}
+  - component: {fileID: 8409176539840768605}
   - component: {fileID: -7088677335111528894}
   - component: {fileID: 835206925238968570}
   m_Layer: 7
@@ -188,7 +188,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-8164431810731254439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   InteractibleLayers:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &-1633116217912177972
+--- !u!114 &8409176539840768605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -507,10 +507,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2665370547671504092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd9af9306d28ee4dba2d8bbccf0030d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6228c4f19d1cd2d4b8a45bda03037f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 144f3e9516e8c7c4d9ea390592bc7d93, type: 2}
+  PlayerUI: {fileID: 0}
+  EmptyItemPrefab: {fileID: -3441115502773983159, guid: 9c3b646f5e485a1488f42144ae221972, type: 3}
 --- !u!114 &-7088677335111528894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,7 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 100
-  MaxHealth: 0
+  MaxHealth: 100
   HealthBar: {fileID: 0}
   Dead:
     m_PersistentCalls:
@@ -640,7 +641,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5901986182518902774, guid: 5b407c9ff4a36ca4ba48a676de037713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

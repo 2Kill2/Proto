@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ReadyUp : MonoBehaviour
 {
@@ -9,6 +10,16 @@ public class ReadyUp : MonoBehaviour
     [SerializeField] GameObject SlimeKing;
     [SerializeField] GameObject Cam;
     [SerializeField] TextMeshProUGUI Label;
+    [SerializeField] Transform Destination;
+    [SerializeField] Transform DestinationCam;
+    [SerializeField] GameObject DestinationBoss;
+
+    [SerializeField] Transform shopCam;
+    [SerializeField] Transform shopSpawn;
+
+    [SerializeField] public UnityEvent BossSpawn;
+
+    [SerializeField] List<GameObject> Players = new List<GameObject>();
 
     public string targetTag = "Player";
     private bool db = false;
@@ -44,13 +55,47 @@ public class ReadyUp : MonoBehaviour
         }
     }
 
+    private void CountPlayers()
+    {
+        int playerLayer = LayerMask.NameToLayer("Player");
+
+        var objects = FindObjectsByType<GameObject>(
+            FindObjectsSortMode.None
+        );
+
+        foreach (var obj in objects)
+        {
+            if (obj.layer == playerLayer)
+            {
+                Players.Add(obj);
+            }
+        }
+    }
+
     private void MoveUp()
     {
-        SlimeKing.gameObject.SetActive(true); 
-        Cam.transform.position = new Vector3(0,10,-10);
+        
+        if (DestinationBoss != null)
+        {
+            DestinationBoss.gameObject.SetActive(true);
+        }
+        Cam.transform.position = DestinationCam.position;
+        Cam.GetComponent<Camera>().orthographicSize = 8.0f;
         foreach (GameObject obj in taggedObjects)
         {
-            obj.transform.position = new Vector3(0, 6, 0); //MODULARIZE :eyes: 
+            obj.transform.position = Destination.position;
         }
+    }
+
+    public void MoveDown()
+    {
+        Cam.transform.position = shopCam.position;
+        Cam.GetComponent<Camera>().orthographicSize = 5.0f;
+        CountPlayers();
+        foreach (GameObject obj in Players)
+        {
+            obj.transform.position = shopSpawn.position;
+        }
+        db = false;
     }
 }

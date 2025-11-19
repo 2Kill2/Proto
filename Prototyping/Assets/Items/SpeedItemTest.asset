@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpeedItemTest
   m_EditorClassIdentifier: 
   Name: Speed I
-  Description: 
+  Description: Speed Boost
   Icon: {fileID: -6144468681439357480, guid: 685910f4f5b5551438466b0a038cfb87, type: 3}
   Price: 0
   RarityWeight: 1

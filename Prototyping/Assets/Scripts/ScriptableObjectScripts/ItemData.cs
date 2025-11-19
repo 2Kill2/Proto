@@ -17,7 +17,7 @@ public abstract class ItemData : ScriptableObject
     [Header("Item")]
     [SerializeField] private string Name;
     [SerializeField] private string Description;
-    [SerializeField] private Image Icon;
+    [SerializeField] private Sprite Icon;
     [SerializeField] private int Price;
 
     [Range(1,10)]
@@ -31,7 +31,7 @@ public abstract class ItemData : ScriptableObject
     public TriggerEvents Event => TriggerEvent;
     public string itemName => Name;
     public string description => Description;
-    public Image ItemIcon => Icon;
+    public Sprite ItemIcon => Icon;
     public int price => Price;
     public float weight => RarityWeight;
     public abstract void Trigger(Vector3 pos = default, float rotation = default, GameObject player = default);
