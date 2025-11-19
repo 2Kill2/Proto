@@ -17,7 +17,7 @@ MonoBehaviour:
   playerTag: Player
   trackingDuration: 0.6
   trackLerpSpeed: 15
-  shadowPrefab: {fileID: 0}
+  shadowPrefab: {fileID: 3142549489049608683, guid: afc2509904bb05c499ca5400c5a5bb3a, type: 3}
   fallDelay: 0.8
   shadowScaleRange: {x: 0.6, y: 1.2}
   slamRadius: 1.6
@@ -26,4 +26,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   vanishYOffset: 6
-  makeInvulnerableWhileHidden: 1
+  hideGfxWhileVanished: 1

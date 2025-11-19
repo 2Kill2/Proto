@@ -3338,9 +3338,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8826618163846210074, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7412101349327858738, guid: 9c5e9ab710a177044bf1e109758f4381, type: 3}
+    - target: {fileID: 8826618163846210074, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826618163846210074, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826618163846210074, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8896578935839116205, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
       propertyPath: m_Name
       value: SlimeKing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896578935839116205, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

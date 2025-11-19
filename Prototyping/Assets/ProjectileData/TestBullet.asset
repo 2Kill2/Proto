@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: TestBullet
   m_EditorClassIdentifier: 
   NameID: Bullet
-  Damage: 10
+  Damage: 2
   Velocity: 20
   Spread: 0
   Lifetime: 5
+  Recoil: {x: 0, y: 0}
   Firerate: 1
-  Size: 1
+  Size: 0.5
+  FireType: 0
+  Count: 0
+  Angle: 0
   Sprite: {fileID: -4480576678929203597, guid: dd6dbf6fd000643428d4f3809e24a10a, type: 3}
   Color:
     serializedVersion: 2
