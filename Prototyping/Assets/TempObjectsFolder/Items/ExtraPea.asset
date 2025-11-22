@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: ExtraPea
+  m_EditorClassIdentifier: 
+  Name: ExtraPea
+  Description: Sometimes fire a pea projectile one primary fire
+  Icon: {fileID: 4863579414621511333, guid: 7ee99345d5e3b624dafe51592b8f6340, type: 3}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 1
+  TriggerPercentage: 40
+  Projectile: {fileID: 4311727026875598617, guid: beb25f8292e9def44ab9eecdc7b6a1b6, type: 3}

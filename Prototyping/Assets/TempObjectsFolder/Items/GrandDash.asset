@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: GrandDash
+  m_EditorClassIdentifier: 
+  Name: Grand Dash
+  Description: Low Chance to fire a GrandBlast on Dashing
+  Icon: {fileID: -6036610973892863926, guid: ba077e7cefe29fb42a6ce980a6fb12a9, type: 3}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 5
+  TriggerPercentage: 10
+  Projectile: {fileID: 4311727026875598617, guid: fb22c2410808aa747ab9d4fb13395de2, type: 3}

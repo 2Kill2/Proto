@@ -14,6 +14,14 @@ public class ReadyUp : MonoBehaviour
     [SerializeField] Transform DestinationCam;
     [SerializeField] GameObject DestinationBoss;
 
+    [SerializeField] Transform Destination2;
+    [SerializeField] Transform DestinationCam2;
+    [SerializeField] GameObject DestinationBoss2;
+
+    [SerializeField] Transform Destination3;
+    [SerializeField] Transform DestinationCam3;
+    [SerializeField] GameObject DestinationBoss3;
+
     [SerializeField] Transform shopCam;
     [SerializeField] Transform shopSpawn;
 
@@ -97,5 +105,19 @@ public class ReadyUp : MonoBehaviour
             obj.transform.position = shopSpawn.position;
         }
         db = false;
+    }
+
+    public void SlimeDefeated()
+    {
+        DestinationCam = DestinationCam2;
+        DestinationBoss = DestinationBoss2;
+        Destination = Destination2;
+    }
+
+    public void PaladinDefeated()
+    {
+        DestinationCam = DestinationCam3;
+        DestinationBoss = DestinationBoss3;
+        Destination = Destination3;
     }
 }

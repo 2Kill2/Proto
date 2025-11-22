@@ -23,7 +23,7 @@ MonoBehaviour:
   FireType: 0
   Count: 0
   Angle: 0
-  Sprite: {fileID: -4480576678929203597, guid: dd6dbf6fd000643428d4f3809e24a10a, type: 3}
+  Sprite: {fileID: 4416717768442454902, guid: 0a4a62cb3b8548a4083b0d1376845a2d, type: 3}
   Color:
     serializedVersion: 2
     rgba: 4278190335

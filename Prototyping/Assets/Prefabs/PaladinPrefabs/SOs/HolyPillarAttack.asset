@@ -20,5 +20,5 @@ MonoBehaviour:
   maxGlobalAttempts: 2000
   telegraphPrefab: {fileID: 3142549489049608683, guid: b7fd2d83c44164e4bb599916bd4bffae, type: 3}
   telegraphTime: 1.8
-  pillarProjectilePrefab: {fileID: 0}
+  pillarProjectilePrefab: {fileID: 6584953358291324270, guid: 56f40439546880a4e97d0940216adfd4, type: 3}
   useAnimatorCues: 1

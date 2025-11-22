@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc4bb4c6470314458dafcb3e9025aaa, type: 3}
+  m_Name: Lich
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  minMoveCooldown: 1
+  maxMoveCooldown: 2
+  attackCooldown: 2
+  movements:
+  - {fileID: 11400000, guid: 784bd46d55f14d647836c99d84cab3a1, type: 2}
+  - {fileID: 11400000, guid: eeab9dd5f40736f4381b8172dae52331, type: 2}
+  attacks:
+  - {fileID: 11400000, guid: 0b48a56e07d295a499ccdfe36b179d88, type: 2}
+  - {fileID: 11400000, guid: cee298f2bf1f6904da479a09c769b672, type: 2}

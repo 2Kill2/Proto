@@ -17,7 +17,7 @@ MonoBehaviour:
   maxMoveCooldown: 2
   attackCooldown: 2
   movements:
-  - {fileID: 11400000, guid: 1e5af40883906fd4bb668bf69ef5d21b, type: 2}
+  - {fileID: 0}
   attacks:
   - {fileID: 11400000, guid: a6be49ada13a946428eb4e7bfc536880, type: 2}
   - {fileID: 11400000, guid: 316a3f670ae0c814da31c7a936adaa2e, type: 2}

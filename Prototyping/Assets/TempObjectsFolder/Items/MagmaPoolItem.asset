@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177a4c5d620376d4f9e6d9984f434695, type: 3}
+  m_Name: MagmaPoolItem
+  m_EditorClassIdentifier: 
+  Name: Magma Pool
+  Description: Shoots a 360 Magma pool
+  Icon: {fileID: 0}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 0
+  ProjectileToEquip: {fileID: 4311727026875598617, guid: ed2e749127e7d8942974c8d477ff558a, type: 3}
+  EquipInSlot: 1

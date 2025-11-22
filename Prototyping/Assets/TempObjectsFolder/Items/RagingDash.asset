@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: RagingDash
+  m_EditorClassIdentifier: 
+  Name: Raging Dash
+  Description: Chance to spit fire when Dashing
+  Icon: {fileID: 0}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 5
+  TriggerPercentage: 50
+  Projectile: {fileID: 4311727026875598617, guid: b4afec707892fd84397402afdfbd4e99, type: 3}

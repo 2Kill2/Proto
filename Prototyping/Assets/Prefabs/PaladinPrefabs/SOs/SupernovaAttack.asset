@@ -32,4 +32,4 @@ MonoBehaviour:
     m_Bits: 0
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0

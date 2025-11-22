@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
+  m_Name: RighteousBurst
+  m_EditorClassIdentifier: 
+  Name: Righteous Burst
+  Description: Fire a volley of light on Secondary Fire
+  Icon: {fileID: 0}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 2
+  TriggerPercentage: 100
+  Projectile: {fileID: 4311727026875598617, guid: 49a36a8d37b791649a03b860a8f9302f, type: 3}

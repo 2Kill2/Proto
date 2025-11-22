@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177a4c5d620376d4f9e6d9984f434695, type: 3}
+  m_Name: ArcShotPrefab
+  m_EditorClassIdentifier: 
+  Name: Arc Shot
+  Description: Fires many waves of projectiles in an arc
+  Icon: {fileID: 3755580487563960433, guid: 9207590424e019d49b0b88495f26ce76, type: 3}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 0
+  ProjectileToEquip: {fileID: 4311727026875598617, guid: 7235bc9ae1ec3a644b094b0b9201f22c, type: 3}
+  EquipInSlot: 0
