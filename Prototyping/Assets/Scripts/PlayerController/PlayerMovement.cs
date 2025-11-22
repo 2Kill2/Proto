@@ -72,11 +72,14 @@ public class PlayerMovement : MonoBehaviour
                 SpriteRenderer.flipX = true;
             else
                 SpriteRenderer.flipX = false;
+
+            PlayerAnimator.SetBool("Walking",true);
         }
         else if (Input.canceled)
         {
             _moveInput = false;
-            return;
+            PlayerAnimator.SetBool("Walking", false);
+          
         }
     }
 
@@ -150,4 +153,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void DamagedAnim()
+    {
+        PlayerAnimator.SetTrigger("Damaged");
+    }
 }
