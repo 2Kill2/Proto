@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Rigidbody to Move")]
     [SerializeField] Rigidbody2D RB2D;
     [SerializeField] Animator PlayerAnimator;
-
+    [SerializeField] SpriteRenderer SpriteRenderer;
     [Header("Tweakable")]
 
     [Tooltip("I dont know what the units are here")]
@@ -68,6 +68,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _moveInput = true;
             _moveDirection = Input.ReadValue<Vector2>();
+            if(_moveDirection.x < 0)
+                SpriteRenderer.flipX = true;
+            else
+                SpriteRenderer.flipX = false;
         }
         else if (Input.canceled)
         {
