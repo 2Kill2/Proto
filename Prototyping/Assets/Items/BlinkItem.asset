@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BlinkItem
   m_EditorClassIdentifier: 
   Name: Blink
-  Description: Quickly move forwards
+  Description: Quickly move forwards, Secondary
   Icon: {fileID: 21300000, guid: b8c393a094db6f046997aedc2c669e1b, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 497da88c2faf0bb479a84820fb980bde, type: 3}

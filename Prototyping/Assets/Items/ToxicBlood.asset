@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Toxic Blood
   Description: Leave pools of sludge behind when taking damage
   Icon: {fileID: 21300000, guid: bba8aba922351184b930b6ed23d29277, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 4
   TriggerPercentage: 100

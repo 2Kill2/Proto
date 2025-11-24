@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Smokebomb
   Description: Perform a backstep on Secondary Fire
   Icon: {fileID: 21300000, guid: 60ebe6e3fbb5a38438361d1d6fa1ae46, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 2
   TriggerPercentage: 100

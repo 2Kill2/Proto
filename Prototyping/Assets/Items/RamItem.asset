@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RamItem
   m_EditorClassIdentifier: 
   Name: Ram
-  Description: Fly towards your target while firing a short-range barrage
+  Description: Fly towards your target while firing a short-range barrage, Primary
   Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 7d5d08aad21eda24e9948797bf63ed94, type: 3}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RapidFireItem
   m_EditorClassIdentifier: 
   Name: Rapid Fire
-  Description: Fire a stream of flames
+  Description: Fire a stream of flames, Primary
   Icon: {fileID: 21300000, guid: 49b61abc461fe024aa7634bf35fe05c4, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 9fd8433cf10920d4bbcf705308a1110a, type: 3}

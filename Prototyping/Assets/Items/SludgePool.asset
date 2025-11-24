@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230b08b9be1357747b2f7912cc071100, type: 3}
   m_Name: SludgePool
   m_EditorClassIdentifier: 
-  Name: SludgePool
+  Name: Sludge Pool
   Description: Chance to fire a sludge pool on Primary fire
   Icon: {fileID: 21300000, guid: f73444cdf896a534fbe626fa9eaefe5c, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 1
   TriggerPercentage: 40

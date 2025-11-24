@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: LifeRune
   Description: Small Max Health increase
   Icon: {fileID: 21300000, guid: b8d65df1b1f9b8e47b52f6c2d0013001, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 0

@@ -8,7 +8,12 @@ public class Item : MonoBehaviour
     private PlayerShooting shooting;
     private void Start()
     {
-        gameObject.SendMessage("AddItem", Data);
+        // Block specific item types
+        if (!(Data is EquipProjectileItem))
+        {
+            gameObject.SendMessage("AddItem", Data);
+        }
+
         shooting = GetComponent<PlayerShooting>();
        
         AssignToEvent();

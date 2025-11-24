@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Retaliation
   Description: Taking Damage fires a short burst of thorns in all directions
   Icon: {fileID: 21300000, guid: f7816dd7ba6332247ae86410480af512, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 4
   TriggerPercentage: 100

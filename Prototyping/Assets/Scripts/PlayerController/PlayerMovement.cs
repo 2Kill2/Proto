@@ -160,14 +160,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Dead()
     {
-        PlayerAnimator.SetTrigger("Dead");
+        PlayerAnimator.SetBool("Dead",true);
     }
 
    
     private void OnEnable()
     {
         gameObject.GetComponent<Health>().Damaged += DamagedAnim;
+        PlayerAnimator.SetBool("Dead", false);
     }
+
     private void OnDisable()
     {
         gameObject.GetComponent<Health>().Damaged -= DamagedAnim;

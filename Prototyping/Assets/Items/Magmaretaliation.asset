@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Magma Retaliation
   Description: Taking Damage sometimes summons a pools of magma
   Icon: {fileID: 21300000, guid: ff78208dba34e6543ab9f54f8cd8fcab, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 4
   TriggerPercentage: 20

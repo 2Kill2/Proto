@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Jordan's Jordans
   Description: Large movement speed boost
   Icon: {fileID: 21300000, guid: 73b5821119b2d0745898a5e103a7b6a9, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 2

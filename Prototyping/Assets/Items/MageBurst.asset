@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Magic Burst
   Description: Chance to launce a volley of magic missiles on Primary Fire
   Icon: {fileID: 21300000, guid: 84a3a551be3f191419005021e1b6932a, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 1
   TriggerPercentage: 20

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Another Drink
   Description: Sometimes move faster after a Primary Fire
   Icon: {fileID: 21300000, guid: 305614879e9450843b443df433ee6b24, type: 3}
-  Price: 0
+  Price: 125
   RarityWeight: 1
   TriggerEvent: 1
   TriggerPercentage: 12

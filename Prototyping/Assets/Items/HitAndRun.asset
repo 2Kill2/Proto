@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Hit & Run
   Description: Gain a speed boost after using your Secondary
   Icon: {fileID: 21300000, guid: 3174c7b607d912a449061ec95a4fccff, type: 3}
-  Price: 0
+  Price: 125
   RarityWeight: 1
   TriggerEvent: 2
   TriggerPercentage: 100

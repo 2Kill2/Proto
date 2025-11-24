@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Sapping Dash
   Description: Sometimes Heal a small amount when Dashing
   Icon: {fileID: 21300000, guid: 89c65e91f99b09a4b87d381600593bb3, type: 3}
-  Price: 0
+  Price: 150
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 20

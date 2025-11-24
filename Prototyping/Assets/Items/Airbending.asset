@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Thieves Britches
   Description: Large Reduction to Dash Cooldown
   Icon: {fileID: 0}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 3

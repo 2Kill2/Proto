@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Swift Dash
   Description: Gain a burst of movement immediately after a Dash
   Icon: {fileID: 21300000, guid: 31a2a1f60d118b64b847cee9faadb542, type: 3}
-  Price: 0
+  Price: 125
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 100

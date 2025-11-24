@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: GrandBlastItem
   m_EditorClassIdentifier: 
   Name: Grand Blast
-  Description: Fire a massive burst of focused energy
+  Description: Fire a massive burst of focused energy, Secondary
   Icon: {fileID: 21300000, guid: 8fe3a0b8264f04a4889c63f274c44f3f, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: fb22c2410808aa747ab9d4fb13395de2, type: 3}

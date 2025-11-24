@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Magic Dash
   Description: Chance to fire volley of magic missiles on Dash
   Icon: {fileID: 21300000, guid: 73b2b099365d6154d8710e3d00bc35eb, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 50

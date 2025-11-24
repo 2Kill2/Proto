@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CannonItem
   m_EditorClassIdentifier: 
   Name: Cannon
-  Description: Fire a large cannonball with heavy recoil
+  Description: Fire a large cannonball with heavy recoil, Secondary
   Icon: {fileID: 21300000, guid: 5c4eaf40eca75fa4f85406746e00b4d3, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 122a72f1afcd18d488d14650be6955f7, type: 3}

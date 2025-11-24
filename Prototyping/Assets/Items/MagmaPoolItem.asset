@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MagmaPoolItem
   m_EditorClassIdentifier: 
   Name: Magma Pool
-  Description: Shoots a 360 Magma pool
+  Description: Shoots a 360 Magma pool, Secondary
   Icon: {fileID: 21300000, guid: e376866d03b09fe4683a4b179657b72c, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: ed2e749127e7d8942974c8d477ff558a, type: 3}

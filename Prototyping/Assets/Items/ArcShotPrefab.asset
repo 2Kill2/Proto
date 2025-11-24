@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ArcShotPrefab
   m_EditorClassIdentifier: 
   Name: Arc Shot
-  Description: Fires many waves of projectiles in an arc
+  Description: Fires many waves of projectiles in an arc, Primary
   Icon: {fileID: 3755580487563960433, guid: 9207590424e019d49b0b88495f26ce76, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 7235bc9ae1ec3a644b094b0b9201f22c, type: 3}

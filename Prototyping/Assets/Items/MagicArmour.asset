@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Magic Armour
   Description: Minor damage reduction increase
   Icon: {fileID: 21300000, guid: 12de37d13c33c284ea7bd84a96fae490, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 1

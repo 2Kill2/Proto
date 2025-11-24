@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: VitalityApple
   Description: Moderate Max Health increase
   Icon: {fileID: 21300000, guid: bdbec82e4b2c7cb45a131597480f4a23, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 0

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LongShotItem
   m_EditorClassIdentifier: 
   Name: Long Shot
-  Description: Fires a single fast moving shot
+  Description: Fires a single fast moving shot, Secondary
   Icon: {fileID: 21300000, guid: 5a1273d335e806f4d888a96125afe875, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: 6277907bf6ee67a4db97a49598eaac69, type: 3}

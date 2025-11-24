@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: TriPeaShooter
   m_EditorClassIdentifier: 
   Name: Tri Pea Shooter
-  Description: Triple pea shooter.
+  Description: Triple pea shooter., Primary
   Icon: {fileID: 4863579414621511333, guid: 7ee99345d5e3b624dafe51592b8f6340, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 6584953358291324270, guid: 073e270e3686efc4c972d3ad7d043b2f, type: 3}

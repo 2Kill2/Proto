@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Righteous Burst
   Description: Fire a volley of light on Secondary Fire
   Icon: {fileID: 21300000, guid: fd4b759242f78114bb30c97f701590db, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 2
   TriggerPercentage: 100

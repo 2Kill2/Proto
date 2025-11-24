@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Speed I
   Description: Speed Boost
   Icon: {fileID: -6144468681439357480, guid: 685910f4f5b5551438466b0a038cfb87, type: 3}
-  Price: 0
+  Price: 125
   RarityWeight: 1
   TriggerEvent: 1
   TriggerPercentage: 1

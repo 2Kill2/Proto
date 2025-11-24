@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Raging Dash
   Description: Chance to spit fire when Dashing
   Icon: {fileID: 21300000, guid: d736c7568ef287a45a9a78cca1345b73, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 50

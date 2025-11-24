@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Grand Dash
   Description: Low Chance to fire a GrandBlast on Dashing
   Icon: {fileID: -6036610973892863926, guid: ba077e7cefe29fb42a6ce980a6fb12a9, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 10

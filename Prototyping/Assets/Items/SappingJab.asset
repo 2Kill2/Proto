@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Sapping Jab
   Description: Heal a small amount on Secondary Fire
   Icon: {fileID: 21300000, guid: a922ade23d69ae24aaf30ab2ce2cf2bb, type: 3}
-  Price: 0
+  Price: 150
   RarityWeight: 1
   TriggerEvent: 2
   TriggerPercentage: 100

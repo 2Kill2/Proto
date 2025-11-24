@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Righteous Dash
   Description: Fire a volley of light on Dash
   Icon: {fileID: 21300000, guid: 18f57410c48962743842e2453785b76a, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 5
   TriggerPercentage: 100

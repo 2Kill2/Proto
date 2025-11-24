@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BackStepItem
   m_EditorClassIdentifier: 
   Name: Backstep
-  Description: 'Quickly move backwards '
+  Description: 'Quickly move backwards, Secondary '
   Icon: {fileID: 21300000, guid: 047bc9cb718489c46a18473a3e69974d, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: f0ae826b9d5b4964fa9aa754672520f4, type: 3}

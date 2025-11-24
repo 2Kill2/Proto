@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Mastercraft Armour
   Description: Moderate damage reduction increase
   Icon: {fileID: 21300000, guid: 11f2e4e3b5dad21479d95e452feb20a0, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 0
   UpgradeStat: 1

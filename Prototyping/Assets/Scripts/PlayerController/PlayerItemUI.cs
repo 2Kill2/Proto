@@ -33,15 +33,13 @@ public class PlayerItemUI : MonoBehaviour
 
     private void CreateNewIcon(ItemData data, int amount)
     {
-        // Instantiate the UI icon under the parent
         ItemIcon icon = Instantiate(EmptyItemPrefab, PlayerUI.transform);
 
-        // Assign visual data
         if (icon.Icon != null)
             icon.Icon.sprite = data.ItemIcon;
 
         if (icon.Count != null)
-            icon.Count.text = amount.ToString();
+            icon.Count.text = amount >= 2 ? amount.ToString() : "";
 
         if (icon.Name != null)
             icon.Name.text = data.name;
@@ -49,18 +47,25 @@ public class PlayerItemUI : MonoBehaviour
         if (icon.Description != null)
             icon.Description.text = data.description;
 
-        // Remember this icon so we can update it later
         ItemIcons.Add(data, icon);
     }
 
 
+
     private void UpdateExistingIcon(ItemData data)
     {
-        // get the UI icon already on screen
+      
         ItemIcon icon = ItemIcons[data];
 
-        // update the count text ONLY
-        if (icon.Count != null)
-            icon.Count.text = Items[data].ToString();
+        
+        if (icon.Count != null )
+        {
+            if (Items[data] >= 2)
+                icon.Count.text = Items[data].ToString();
+            else
+                icon.Count.text = "";
+
+        }
+            
     }
 }

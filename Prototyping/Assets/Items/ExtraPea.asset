@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: ExtraPea
   Description: Sometimes fire a pea projectile one primary fire
   Icon: {fileID: 4863579414621511333, guid: 7ee99345d5e3b624dafe51592b8f6340, type: 3}
-  Price: 0
+  Price: 100
   RarityWeight: 1
   TriggerEvent: 1
   TriggerPercentage: 40

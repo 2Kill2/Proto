@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: FireSpititem
   m_EditorClassIdentifier: 
   Name: Fire Spit
-  Description: Fire a barrage of innaccurate flames
+  Description: Fire a barrage of innaccurate flames, Primary
   Icon: {fileID: 21300000, guid: 4fc82b472072b00449ff3a867761836f, type: 3}
-  Price: 0
+  Price: 50
   RarityWeight: 1
   TriggerEvent: 0
   ProjectileToEquip: {fileID: 4311727026875598617, guid: b4afec707892fd84397402afdfbd4e99, type: 3}
