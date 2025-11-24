@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: 0.09}
+  m_AnchoredPosition: {x: -5.66, y: 0.18}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &163249420
@@ -2771,6 +2771,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6073656411669666210, guid: b637bc07cf5597141b44c4400a5a8d39, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 437
+      objectReference: {fileID: 0}
     - target: {fileID: 6111520085768897947, guid: b637bc07cf5597141b44c4400a5a8d39, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2906,6 +2910,10 @@ PrefabInstance:
       propertyPath: Destination
       value: 
       objectReference: {fileID: 894894965}
+    - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
+      propertyPath: ShopSpawner
+      value: 
+      objectReference: {fileID: 12454183}
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: Bosses.Array.size
       value: 3

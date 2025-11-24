@@ -24,6 +24,8 @@ public class ReadyUp : MonoBehaviour
     [SerializeField] Transform shopCam;
     [SerializeField] Transform shopSpawn;
 
+    [SerializeField] ShopSpawner ShopSpawner;
+
     [SerializeField] public UnityEvent BossSpawn;
 
     [SerializeField] List<GameObject> Players = new List<GameObject>();
@@ -37,6 +39,7 @@ public class ReadyUp : MonoBehaviour
 
     private void Start()
     {
+        taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
         Manager = GameManager.instance;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,7 +68,9 @@ public class ReadyUp : MonoBehaviour
 
     private void Update()
     {
+        if(_activeBoss == null)
         taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
+
         Label.text = touchingObjects.Count+"/"+taggedObjects.Length;
         if (touchingObjects.Count > 0 && touchingObjects.Count == taggedObjects.Length && db==false)
         {
@@ -93,6 +98,7 @@ public class ReadyUp : MonoBehaviour
 
     private void ToArena()
     {
+        Manager.CountPlayers();
         Collider2D collider = null;
         GoldCount.SetActive(false);
         switch (NextBoss.GetComponent<BossBase>().Arena)
@@ -129,7 +135,7 @@ public class ReadyUp : MonoBehaviour
     {
         _activeBoss.GetComponent<Health>().DeadEvent -= BossDied;
 
-
+        Manager.BossesKilled += 1;
 
         Manager.ChangeGold(100 * (Manager.BossesKilled + 1));
 
@@ -139,6 +145,8 @@ public class ReadyUp : MonoBehaviour
 
     public void ToShop()
     {
+       
+        ShopSpawner.NewShop();
         GoldCount.SetActive(true);
         NextBoss = null;
         SelectBoss();
@@ -154,6 +162,7 @@ public class ReadyUp : MonoBehaviour
         foreach (GameObject obj in Players)
         {
             obj.transform.position = shopSpawn.position;
+            obj.GetComponent<Health>().RefillHealth();
         }
         db = false;
     }

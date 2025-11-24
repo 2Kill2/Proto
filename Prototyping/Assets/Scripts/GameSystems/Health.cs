@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
         CurrentHealth += Amount; 
         if(Healed != null) Healed.Invoke();
     }
-    private void RefillHealth() => CurrentHealth = StartingHealth;
+   public void RefillHealth() => CurrentHealth = StartingHealth;
 
     private void CheckState()
     {
