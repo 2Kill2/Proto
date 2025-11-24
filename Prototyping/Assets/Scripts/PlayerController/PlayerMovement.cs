@@ -157,4 +157,9 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerAnimator.SetTrigger("Damaged");
     }
+
+    public void Dead()
+    {
+        PlayerAnimator.SetTrigger("Dead");
+    }
 }

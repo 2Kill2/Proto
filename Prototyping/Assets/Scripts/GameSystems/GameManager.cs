@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private int _gold;
     private float _bossesKilled = 0;
-
+  
 
     public float BossesKilled
     {
