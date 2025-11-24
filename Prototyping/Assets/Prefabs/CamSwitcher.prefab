@@ -128,8 +128,8 @@ Transform:
   m_GameObject: {fileID: 5698076932231195069}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0174, y: -3.6537, z: 0}
+  m_LocalScale: {x: 0.6268163, y: 0.8267804, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2427997799893746878}
@@ -258,7 +258,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.018799692, y: -3.644796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -268,7 +268,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.66160494, y: 0.7885027}
   m_EdgeRadius: 0
 --- !u!114 &3389056725976433993
 MonoBehaviour:
@@ -282,12 +282,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4c6fd2f7f23db4eb939c89e6fc08bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlimeKing: {fileID: 0}
+  NextBoss: {fileID: 0}
+  Bosses: []
   Cam: {fileID: 0}
   Label: {fileID: 7917655512862333643}
   Destination: {fileID: 0}
-  DestinationCam: {fileID: 0}
-  DestinationBoss: {fileID: 0}
+  ThroneRoom: {fileID: 0}
+  ChestRoom: {fileID: 0}
+  LavaPit: {fileID: 0}
   shopCam: {fileID: 0}
   shopSpawn: {fileID: 0}
   BossSpawn:
@@ -341,7 +343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.57, y: 1.74}
+  m_AnchoredPosition: {x: -0.03, y: -5.97}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4659463907700088865
@@ -408,8 +410,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -439,7 +441,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 98.053246, y: 25.213692, z: 98.053246, w: 25.12431}
+  m_margin: {x: 98.053246, y: 25.99719, z: 98.053246, w: 25.12431}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

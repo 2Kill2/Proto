@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 3876905046802755610}
   - component: {fileID: 2520781270738367992}
   - component: {fileID: 2234248289013763873}
+  - component: {fileID: 1213293451815351018}
   m_Layer: 8
   m_Name: Paladin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5291010858498671434
 Transform:
   m_ObjectHideFlags: 0
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: f84c207bd6e47bb46910033ad8f0015e, type: 2}
   projectileOrigin: {fileID: 5291010858498671434}
+  BossArena: 0
   arenaCollider: {fileID: 0}
   arenaPaddingX: 0.8
   arenaPaddingY: 0.8
@@ -238,6 +240,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1213293451815351018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324863676805643334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05fe106bacfe054a891e58dc1c40d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 15
 --- !u!1 &8089439897957888610
 GameObject:
   m_ObjectHideFlags: 0

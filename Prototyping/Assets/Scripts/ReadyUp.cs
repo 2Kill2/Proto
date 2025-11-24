@@ -4,31 +4,22 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class ReadyUp : MonoBehaviour
 {
-    [SerializeField] GameObject SlimeKing;
-    [SerializeField] GameObject Cam;
+
+    [SerializeField] GameObject NextBoss;
+    [SerializeField] GameObject[] Bosses;
+
+   
+    [SerializeField] Camera Cam;
     [SerializeField] TextMeshProUGUI Label;
 
-    //Slime, script uses this as default
+    
     [SerializeField] Transform Destination;
-    [SerializeField] Transform DestinationCam;
-    [SerializeField] GameObject DestinationBoss;
 
-    //Paladin
-    [SerializeField] Transform Destination2;
-    [SerializeField] Transform DestinationCam2;
-    [SerializeField] GameObject DestinationBoss2;
-
-    //Lich
-    [SerializeField] Transform Destination3;
-    [SerializeField] Transform DestinationCam3;
-    [SerializeField] GameObject DestinationBoss3;
-
-    //Dragon
-    [SerializeField] Transform Destination4;
-    [SerializeField] Transform DestinationCam4;
-    [SerializeField] GameObject DestinationBoss4;
+    [SerializeField] GameObject ThroneRoom,ChestRoom,LavaPit;
+    
 
     [SerializeField] Transform shopCam;
     [SerializeField] Transform shopSpawn;
@@ -46,6 +37,12 @@ public class ReadyUp : MonoBehaviour
     {
         touchingObjects.Add(collision.gameObject);
         Debug.Log(touchingObjects.Count);
+    }
+
+    private void SelectBoss()
+    {
+        if(NextBoss == null)
+            NextBoss = Bosses[Random.Range(0, Bosses.Length)];
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -67,7 +64,7 @@ public class ReadyUp : MonoBehaviour
         if (touchingObjects.Count > 0 && touchingObjects.Count == taggedObjects.Length && db==false)
         {
             db = true;
-            MoveUp();
+            ToArena();
         }
     }
 
@@ -88,55 +85,43 @@ public class ReadyUp : MonoBehaviour
         }
     }
 
-    private void MoveUp()
+    private void ToArena()
     {
-        
-        if (DestinationBoss != null)
+        switch (NextBoss.GetComponent<BossBase>().Arena)
         {
-            DestinationBoss.gameObject.SetActive(true);
+            case BossBase.Arenas.ChestRoom:
+                Destination.position = ChestRoom.transform.position;
+                break;         
+            case BossBase.Arenas.ThroneRoom:
+                Destination.position = ThroneRoom.transform.position;
+                break;
+            case BossBase.Arenas.LavaPit:
+                Destination.position = LavaPit.transform.position;
+                break;
         }
-        Cam.transform.position = DestinationCam.position;
-        Cam.GetComponent<Camera>().orthographicSize = 8.0f;
+        
+        Cam.orthographicSize = 8.0f;
         foreach (GameObject obj in taggedObjects)
         {
             obj.transform.position = Destination.position;
         }
     }
 
-    public void MoveDown()
+    public void ToShop()
     {
         StartCoroutine(WaitAndMove());
     }
+
     IEnumerator WaitAndMove()
     {
         yield return new WaitForSeconds(5.0f);
         Cam.transform.position = shopCam.position;
-        Cam.GetComponent<Camera>().orthographicSize = 5.0f;
+        Cam.orthographicSize = 5.0f;
         CountPlayers();
         foreach (GameObject obj in Players)
         {
             obj.transform.position = shopSpawn.position;
         }
         db = false;
-    }
-
-    public void SlimeDefeated()
-    {
-        DestinationCam = DestinationCam2;
-        DestinationBoss = DestinationBoss2;
-        Destination = Destination2;
-    }
-
-    public void PaladinDefeated()
-    {
-        DestinationCam = DestinationCam3;
-        DestinationBoss = DestinationBoss3;
-        Destination = Destination3;
-    }
-    public void LichDefeated()
-    {
-        DestinationCam = DestinationCam4;
-        DestinationBoss = DestinationBoss4;
-        Destination = Destination4;
     }
 }

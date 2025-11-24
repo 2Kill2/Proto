@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
         if (Players.Count <= 0)
         {
-
+            AllPlayersDead.Invoke();
 
         }
     }

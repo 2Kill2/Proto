@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 4140261915106574671}
   - component: {fileID: 9215075429319161953}
   - component: {fileID: 1605698067432498589}
+  - component: {fileID: 2706771241898885133}
   m_Layer: 8
   m_Name: Lich
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4696803093824149378
 Transform:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 75e21903d1d2460499720095571d67b6, type: 2}
   projectileOrigin: {fileID: 4696803093824149378}
+  BossArena: 0
   arenaCollider: {fileID: 0}
   arenaPaddingX: 0.8
   arenaPaddingY: 0.8
@@ -292,3 +294,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2706771241898885133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767658427280896855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05fe106bacfe054a891e58dc1c40d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10

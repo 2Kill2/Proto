@@ -4,12 +4,22 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class BossBase : MonoBehaviour
 {
+
+    public enum Arenas
+    {
+        ChestRoom = 0,
+        ThroneRoom = 1,
+        LavaPit = 2,
+    }
+
+
     [Header("Setup")]
     [SerializeField] protected BossConfig config;
     // optional bullet origin point
     [SerializeField] private Transform projectileOrigin;
 
     [Header("Arena")]
+    [SerializeField] private Arenas BossArena;
     [SerializeField] private Collider2D arenaCollider;
 
     [Header("Top-Down Settings")]
@@ -32,6 +42,7 @@ public abstract class BossBase : MonoBehaviour
     public BossConfig Config => config;
     public Transform ProjectileOrigin => projectileOrigin;
     public Projectile ProjectilePrefab => projectilePrefab;
+    public Arenas Arena => BossArena;
 
     protected virtual void Awake()
     {
@@ -206,4 +217,7 @@ public abstract class BossBase : MonoBehaviour
     {
         currentTarget = t;
     }
+
+
+    
 }
