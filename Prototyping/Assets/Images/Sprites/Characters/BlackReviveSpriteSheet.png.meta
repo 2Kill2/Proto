@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: 7b7f8030ce8cd114695c4fe451f98cd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4863591434010021813
+    second: BlackReviveSpriteSheet_0
+  - first:
+      213: 3663987004802076857
+    second: BlackReviveSpriteSheet_1
+  - first:
+      213: 3725525563335278675
+    second: BlackReviveSpriteSheet_2
+  - first:
+      213: -1309580757338360240
+    second: BlackReviveSpriteSheet_3
+  - first:
+      213: -651649483654226680
+    second: BlackReviveSpriteSheet_4
+  - first:
+      213: 2523894235746836817
+    second: BlackReviveSpriteSheet_5
+  - first:
+      213: 6671200053775354346
+    second: BlackReviveSpriteSheet_6
+  - first:
+      213: -3178267274964369555
+    second: BlackReviveSpriteSheet_7
+  - first:
+      213: 5213037104220907573
+    second: BlackReviveSpriteSheet_8
+  - first:
+      213: 6569726645938729973
+    second: BlackReviveSpriteSheet_9
+  - first:
+      213: -8914654011597722672
+    second: BlackReviveSpriteSheet_10
+  - first:
+      213: -5646913187893006434
+    second: BlackReviveSpriteSheet_11
+  - first:
+      213: 6365340517172151100
+    second: BlackReviveSpriteSheet_12
+  - first:
+      213: -4072894902379642015
+    second: BlackReviveSpriteSheet_13
+  - first:
+      213: -8737523660721876212
+    second: BlackReviveSpriteSheet_14
+  - first:
+      213: 162099100857575306
+    second: BlackReviveSpriteSheet_15
+  - first:
+      213: -5178097540808148283
+    second: BlackReviveSpriteSheet_16
+  - first:
+      213: -4326303434056159776
+    second: BlackReviveSpriteSheet_17
+  - first:
+      213: -6362552663256633639
+    second: BlackReviveSpriteSheet_18
+  - first:
+      213: -6575994535298135477
+    second: BlackReviveSpriteSheet_19
+  - first:
+      213: -7808584297539450667
+    second: BlackReviveSpriteSheet_20
+  - first:
+      213: 273043594290861634
+    second: BlackReviveSpriteSheet_21
+  - first:
+      213: -6608912822683108932
+    second: BlackReviveSpriteSheet_22
+  - first:
+      213: 8791902326773186692
+    second: BlackReviveSpriteSheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlackReviveSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b403333fb5d018cb0800000000000000
+      internalID: -4863591434010021813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackReviveSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b010eaa4c819d230800000000000000
+      internalID: 3663987004802076857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackReviveSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3508c3cd2c9b3b330800000000000000
+      internalID: 3725525563335278675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackReviveSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056f82a5d3f63dde0800000000000000
+      internalID: -1309580757338360240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackReviveSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d19b84f30e4f6f0800000000000000
+      internalID: -651649483654226680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 751a361ca8fae724aa416dd06d26f0c4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BlackReviveSpriteSheet_0: -4863591434010021813
+      BlackReviveSpriteSheet_1: 3663987004802076857
+      BlackReviveSpriteSheet_2: 3725525563335278675
+      BlackReviveSpriteSheet_3: -1309580757338360240
+      BlackReviveSpriteSheet_4: -651649483654226680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

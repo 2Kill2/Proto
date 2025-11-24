@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 075b1a05edace6241b195f45c5e0430f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3179787820359121624
+    second: WhiteReviveSpriteSheet_0
+  - first:
+      213: -1266624247910034673
+    second: WhiteReviveSpriteSheet_1
+  - first:
+      213: 7859659111927334814
+    second: WhiteReviveSpriteSheet_2
+  - first:
+      213: -50191203594626973
+    second: WhiteReviveSpriteSheet_3
+  - first:
+      213: -3245083949190071958
+    second: WhiteReviveSpriteSheet_4
+  - first:
+      213: 6354340553516120581
+    second: WhiteReviveSpriteSheet_5
+  - first:
+      213: -6531498855425337374
+    second: WhiteReviveSpriteSheet_6
+  - first:
+      213: -894448032940515949
+    second: WhiteReviveSpriteSheet_7
+  - first:
+      213: -6618884235502639325
+    second: WhiteReviveSpriteSheet_8
+  - first:
+      213: -6307880467168409373
+    second: WhiteReviveSpriteSheet_9
+  - first:
+      213: 7877689859250653857
+    second: WhiteReviveSpriteSheet_10
+  - first:
+      213: 782638271735855563
+    second: WhiteReviveSpriteSheet_11
+  - first:
+      213: -4634957105908127177
+    second: WhiteReviveSpriteSheet_12
+  - first:
+      213: 8031708320513944888
+    second: WhiteReviveSpriteSheet_13
+  - first:
+      213: -2200810691873994291
+    second: WhiteReviveSpriteSheet_14
+  - first:
+      213: 3721679395993420211
+    second: WhiteReviveSpriteSheet_15
+  - first:
+      213: 1568891178292235727
+    second: WhiteReviveSpriteSheet_16
+  - first:
+      213: -1626380476164009115
+    second: WhiteReviveSpriteSheet_17
+  - first:
+      213: -4654530436224463697
+    second: WhiteReviveSpriteSheet_18
+  - first:
+      213: 7406332852605013981
+    second: WhiteReviveSpriteSheet_19
+  - first:
+      213: 5142497684264901188
+    second: WhiteReviveSpriteSheet_20
+  - first:
+      213: -8064369464290533436
+    second: WhiteReviveSpriteSheet_21
+  - first:
+      213: -248804949728815542
+    second: WhiteReviveSpriteSheet_22
+  - first:
+      213: -4797643959221946658
+    second: WhiteReviveSpriteSheet_23
+  - first:
+      213: 3791501192615496203
+    second: WhiteReviveSpriteSheet_24
+  - first:
+      213: -8467289781778539973
+    second: WhiteReviveSpriteSheet_25
+  - first:
+      213: -3878249205591421733
+    second: WhiteReviveSpriteSheet_26
+  - first:
+      213: 8461359256914214142
+    second: WhiteReviveSpriteSheet_27
+  - first:
+      213: -3386473874879835609
+    second: WhiteReviveSpriteSheet_28
+  - first:
+      213: -6146920317531763282
+    second: WhiteReviveSpriteSheet_29
+  - first:
+      213: -2332580372792513124
+    second: WhiteReviveSpriteSheet_30
+  - first:
+      213: -4538708194564915486
+    second: WhiteReviveSpriteSheet_31
+  - first:
+      213: -348171525068703875
+    second: WhiteReviveSpriteSheet_32
+  - first:
+      213: 834109966409232460
+    second: WhiteReviveSpriteSheet_33
+  - first:
+      213: -1844678366390936595
+    second: WhiteReviveSpriteSheet_34
+  - first:
+      213: -624549332447211755
+    second: WhiteReviveSpriteSheet_35
+  - first:
+      213: -4620746047258220904
+    second: WhiteReviveSpriteSheet_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteReviveSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da7e95ec20e02c20800000000000000
+      internalID: 3179787820359121624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteReviveSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f031d6715fb0c6ee0800000000000000
+      internalID: -1266624247910034673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteReviveSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97471ee15e131d60800000000000000
+      internalID: 7859659111927334814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteReviveSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36894e2cd5fad4ff0800000000000000
+      internalID: -50191203594626973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteReviveSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a693436675527f2d0800000000000000
+      internalID: -3245083949190071958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 92b799c0d3366c94f97b8309ccaa1818
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WhiteReviveSpriteSheet_0: 3179787820359121624
+      WhiteReviveSpriteSheet_1: -1266624247910034673
+      WhiteReviveSpriteSheet_2: 7859659111927334814
+      WhiteReviveSpriteSheet_3: -50191203594626973
+      WhiteReviveSpriteSheet_4: -3245083949190071958
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

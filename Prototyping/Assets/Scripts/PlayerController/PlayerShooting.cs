@@ -109,6 +109,8 @@ public class PlayerShooting : MonoBehaviour
 
     public void ShootInputSecondary(InputAction.CallbackContext input)
     {
+        if(Secondary == null) return;   
+
         if (input.started)
             _secondaryHeld = true;
         else if (input.canceled)

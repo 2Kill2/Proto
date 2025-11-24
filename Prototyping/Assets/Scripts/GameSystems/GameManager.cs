@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private int _gold;
+    private int _gold = 200;
     private float _bossesKilled = 0;
 
     [SerializeField] List<GameObject> Players = new List<GameObject>();
@@ -29,12 +29,14 @@ public class GameManager : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+
+        GoldText.text = _gold.ToString();
     }
 
     public void ChangeGold(int value)
     {
          _gold += value;
-        GoldText.text = value.ToString();
+        GoldText.text = _gold.ToString();
     }
 
 

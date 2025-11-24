@@ -73,12 +73,12 @@ public class PlayerMovement : MonoBehaviour
             else
                 SpriteRenderer.flipX = false;
 
-            PlayerAnimator.SetBool("Walking",true);
+           
         }
         else if (Input.canceled)
         {
             _moveInput = false;
-            PlayerAnimator.SetBool("Walking", false);
+          
           
         }
     }
@@ -161,5 +161,15 @@ public class PlayerMovement : MonoBehaviour
     public void Dead()
     {
         PlayerAnimator.SetTrigger("Dead");
+    }
+
+   
+    private void OnEnable()
+    {
+        gameObject.GetComponent<Health>().Damaged += DamagedAnim;
+    }
+    private void OnDisable()
+    {
+        gameObject.GetComponent<Health>().Damaged -= DamagedAnim;
     }
 }

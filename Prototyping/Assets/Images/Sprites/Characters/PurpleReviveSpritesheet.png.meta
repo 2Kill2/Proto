@@ -1,25 +1,76 @@
 fileFormatVersion: 2
-guid: 5b407c9ff4a36ca4ba48a676de037713
+guid: 234b716bc541dbd4f8da6279aa3c34aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 802324903120014064
-    second: WitchWAttackSpriteSheet_0
+      213: -845082396716316874
+    second: PurpleReviveSpritesheet_0
   - first:
-      213: -3833433948336417625
-    second: WitchWAttackSpriteSheet_1
+      213: 8025356122966369803
+    second: PurpleReviveSpritesheet_1
   - first:
-      213: -3463641236379973313
-    second: WitchWAttackSpriteSheet_2
+      213: -3299200897006075902
+    second: PurpleReviveSpritesheet_2
   - first:
-      213: 5901986182518902774
-    second: WitchWAttackSpriteSheet_3
+      213: -3532747202530066846
+    second: PurpleReviveSpritesheet_3
   - first:
-      213: 2466609983907780153
-    second: WitchWAttackSpriteSheet_4
+      213: -892094907665912279
+    second: PurpleReviveSpritesheet_4
   - first:
-      213: 3382393544184485283
-    second: WitchWAttackSpriteSheet_5
+      213: 3869386217542444281
+    second: PurpleReviveSpritesheet_5
+  - first:
+      213: 3379198387332970194
+    second: PurpleReviveSpritesheet_6
+  - first:
+      213: -8446794345047378847
+    second: PurpleReviveSpritesheet_7
+  - first:
+      213: -2805900778225162922
+    second: PurpleReviveSpritesheet_8
+  - first:
+      213: 4393829746524930722
+    second: PurpleReviveSpritesheet_9
+  - first:
+      213: -2484672221233104115
+    second: PurpleReviveSpritesheet_10
+  - first:
+      213: 6612020348199109487
+    second: PurpleReviveSpritesheet_11
+  - first:
+      213: -3217641034357131869
+    second: PurpleReviveSpritesheet_12
+  - first:
+      213: 4528833222791886463
+    second: PurpleReviveSpritesheet_13
+  - first:
+      213: 5807592765773550931
+    second: PurpleReviveSpritesheet_14
+  - first:
+      213: -3126198909545249986
+    second: PurpleReviveSpritesheet_15
+  - first:
+      213: 3000214738223898164
+    second: PurpleReviveSpritesheet_16
+  - first:
+      213: -6185031468709716074
+    second: PurpleReviveSpritesheet_17
+  - first:
+      213: -2631105171173565393
+    second: PurpleReviveSpritesheet_18
+  - first:
+      213: -4536869077954576644
+    second: PurpleReviveSpritesheet_19
+  - first:
+      213: -4576849369248325119
+    second: PurpleReviveSpritesheet_20
+  - first:
+      213: 8279987537002692794
+    second: PurpleReviveSpritesheet_21
+  - first:
+      213: -6826806705860577064
+    second: PurpleReviveSpritesheet_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +103,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -89,7 +140,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -111,17 +162,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_0
+      name: PurpleReviveSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 111
-        width: 146
-        height: 186
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fa0bec9f3e622b00800000000000000
-      internalID: 802324903120014064
+      spriteID: 637c9c1a90aa544f0800000000000000
+      internalID: -845082396716316874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_1
+      name: PurpleReviveSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 247
-        y: 159
-        width: 50
-        height: 50
+        x: 384
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a41c776228eccac0800000000000000
-      internalID: -3833433948336417625
+      spriteID: b06aa69afdacf5f60800000000000000
+      internalID: 8025356122966369803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_2
+      name: PurpleReviveSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 487
-        y: 111
-        width: 146
-        height: 186
+        x: 768
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f394d2c85acaeefc0800000000000000
-      internalID: -3463641236379973313
+      spriteID: 2008d4b9342e632d0800000000000000
+      internalID: -3299200897006075902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_3
+      name: PurpleReviveSpritesheet_3
       rect:
         serializedVersion: 2
-        x: 623
-        y: 159
-        width: 58
-        height: 50
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ff8d46b92118e150800000000000000
-      internalID: 5901986182518902774
+      spriteID: 26eb0f7f22929fec0800000000000000
+      internalID: -3532747202530066846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_4
+      name: PurpleReviveSpritesheet_4
       rect:
         serializedVersion: 2
-        x: 871
-        y: 111
-        width: 146
-        height: 186
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,30 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 936514236b82b3220800000000000000
-      internalID: 2466609983907780153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchWAttackSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 1015
-        y: 159
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a5d0bbf10da0fe20800000000000000
-      internalID: 3382393544184485283
+      spriteID: 92e63a27864ae93f0800000000000000
+      internalID: -892094907665912279
       vertices: []
       indices: 
       edges: []
@@ -250,7 +292,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4260fddd628a519409d020c61e4cdebf
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +302,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WitchWAttackSpriteSheet_0: 802324903120014064
-      WitchWAttackSpriteSheet_1: -3833433948336417625
-      WitchWAttackSpriteSheet_2: -3463641236379973313
-      WitchWAttackSpriteSheet_3: 5901986182518902774
-      WitchWAttackSpriteSheet_4: 2466609983907780153
-      WitchWAttackSpriteSheet_5: 3382393544184485283
+      PurpleReviveSpritesheet_0: -845082396716316874
+      PurpleReviveSpritesheet_1: 8025356122966369803
+      PurpleReviveSpritesheet_2: -3299200897006075902
+      PurpleReviveSpritesheet_3: -3532747202530066846
+      PurpleReviveSpritesheet_4: -892094907665912279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

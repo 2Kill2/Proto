@@ -20,7 +20,8 @@ public class ItemBuyObject : MonoBehaviour
     [SerializeField] TextMeshProUGUI DescriptionText;
     [SerializeField] TextMeshProUGUI NameText;
     [SerializeField] TextMeshProUGUI PriceText;
-    [SerializeField] Sprite IconImage;
+    [SerializeField] Image IconImage;
+    [SerializeField] Sprite Icon;
 
     public void ItemToStore(ItemData item)
     {
@@ -30,10 +31,12 @@ public class ItemBuyObject : MonoBehaviour
 
         DescriptionText.text = item.description;
         NameText.text = item.name;
-        PriceText.text = Price.ToString() + " Gold";
+        PriceText.text = Price.ToString();
 
-        IconImage = item.ItemIcon;
-        this.GetComponent<SpriteRenderer>().sprite = IconImage;
+        Icon = item.ItemIcon;
+
+        IconImage.sprite = Icon;
+        this.GetComponent<SpriteRenderer>().sprite = Icon;
     }
 
     /// <summary>

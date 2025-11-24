@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -89,7 +89,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -118,10 +131,10 @@ TextureImporter:
       name: WitchWIdleSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 111
-        width: 146
-        height: 186
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +153,10 @@ TextureImporter:
       name: WitchWIdleSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 247
-        y: 159
-        width: 50
-        height: 50
+        x: 384
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +175,10 @@ TextureImporter:
       name: WitchWIdleSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 487
-        y: 111
-        width: 146
-        height: 178
+        x: 768
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,77 +193,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: WitchWIdleSpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 631
-        y: 151
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd36ee45dff207ba0800000000000000
-      internalID: -6093317530734140451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchWIdleSpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 871
-        y: 111
-        width: 146
-        height: 186
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7482a40c78133de0800000000000000
-      internalID: -1354712141975616385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchWIdleSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 1015
-        y: 159
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 326697b389ecf2ec0800000000000000
-      internalID: -3589423224762833373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8561d95500f621a4285a540ca1439b83
     internalID: 0
     vertices: []
     indices: 
@@ -263,9 +210,6 @@ TextureImporter:
       WitchWIdleSpriteSheet_0: 4158299233737142746
       WitchWIdleSpriteSheet_1: 8293636558288949616
       WitchWIdleSpriteSheet_2: 500811511416113848
-      WitchWIdleSpriteSheet_3: -6093317530734140451
-      WitchWIdleSpriteSheet_4: -1354712141975616385
-      WitchWIdleSpriteSheet_5: -3589423224762833373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
