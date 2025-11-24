@@ -9,13 +9,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private int _gold = 200;
-    private float _bossesKilled = 0;
+    private int _bossesKilled = 0;
 
     [SerializeField] List<GameObject> Players = new List<GameObject>();
     [SerializeField] UnityEvent AllPlayersDead;
     [SerializeField] TextMeshProUGUI GoldText;
 
-    public float BossesKilled
+    public int BossesKilled
     {
         get { return _bossesKilled; }
         set { _bossesKilled = value; }

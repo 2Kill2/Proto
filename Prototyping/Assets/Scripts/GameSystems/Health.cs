@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 {
     public event Action Damaged;
     public event Action Healed;
-
+    public event Action DeadEvent;
     [SerializeField] float StartingHealth;
     [SerializeField] float MaxHealth;
 
@@ -61,6 +61,9 @@ public class Health : MonoBehaviour
 
         if(_health == 0)
         {
+            if(DeadEvent != null)
+                DeadEvent.Invoke();
+
             Dead.Invoke(gameObject);
         }
     }

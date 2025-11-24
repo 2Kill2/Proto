@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class ReadyUp : MonoBehaviour
 {
-
+    [SerializeField] GameObject GoldCount;
     [SerializeField] GameObject NextBoss;
     [SerializeField] GameObject[] Bosses;
 
@@ -32,7 +32,13 @@ public class ReadyUp : MonoBehaviour
     private bool db = false;
     private HashSet<GameObject> touchingObjects = new HashSet<GameObject>();
     private GameObject[] taggedObjects;
+    private GameObject _activeBoss;
+    private GameManager Manager;
 
+    private void Start()
+    {
+        Manager = GameManager.instance;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         touchingObjects.Add(collision.gameObject);
@@ -87,19 +93,31 @@ public class ReadyUp : MonoBehaviour
 
     private void ToArena()
     {
+        Collider2D collider = null;
+        GoldCount.SetActive(false);
         switch (NextBoss.GetComponent<BossBase>().Arena)
         {
             case BossBase.Arenas.ChestRoom:
                 Destination.position = ChestRoom.transform.position;
+                collider = ChestRoom.GetComponent<Collider2D>();
                 break;         
             case BossBase.Arenas.ThroneRoom:
                 Destination.position = ThroneRoom.transform.position;
+                collider = ThroneRoom.GetComponent<Collider2D>();
                 break;
             case BossBase.Arenas.LavaPit:
                 Destination.position = LavaPit.transform.position;
+                collider = LavaPit.GetComponent<Collider2D>();
                 break;
         }
-        
+
+        _activeBoss = Instantiate(NextBoss, Destination.transform.position, Quaternion.identity);
+
+        _activeBoss.GetComponent<Health>().DeadEvent += BossDied;
+
+        _activeBoss.GetComponent<BossBase>().SetArena(collider);
+
+        Cam.transform.position = new Vector3(Destination.position.x, Destination.position.y, -10);
         Cam.orthographicSize = 8.0f;
         foreach (GameObject obj in taggedObjects)
         {
@@ -107,8 +125,23 @@ public class ReadyUp : MonoBehaviour
         }
     }
 
+    private void BossDied()
+    {
+        _activeBoss.GetComponent<Health>().DeadEvent -= BossDied;
+
+
+
+        Manager.ChangeGold(100 * (Manager.BossesKilled + 1));
+
+        Destroy(_activeBoss);
+        ToShop();
+    }
+
     public void ToShop()
     {
+        GoldCount.SetActive(true);
+        NextBoss = null;
+        SelectBoss();
         StartCoroutine(WaitAndMove());
     }
 

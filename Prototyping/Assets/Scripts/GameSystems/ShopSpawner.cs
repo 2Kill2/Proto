@@ -38,8 +38,8 @@ public class ShopSpawner : MonoBehaviour
         {
             <= 3 => EarlyGameDrops,
             > 3 and <= 6 => MidGameDrops,
-            > 6 => LateGameDrops,
-            _ => EarlyGameDrops
+            > 6 => LateGameDrops
+            
         };
 
         SpawnShop(chosenTable);
