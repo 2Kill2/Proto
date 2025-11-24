@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177a4c5d620376d4f9e6d9984f434695, type: 3}
+  m_Name: RapidFireItem
+  m_EditorClassIdentifier: 
+  Name: Rapid Fire
+  Description: Fire a stream of flames
+  Icon: {fileID: 21300000, guid: 49b61abc461fe024aa7634bf35fe05c4, type: 3}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 0
+  ProjectileToEquip: {fileID: 4311727026875598617, guid: 9fd8433cf10920d4bbcf705308a1110a, type: 3}
+  EquipInSlot: 0

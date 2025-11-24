@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Stage2Items
   m_EditorClassIdentifier: 
   ItemsInTable:
-  - {fileID: 11400000, guid: 144f3e9516e8c7c4d9ea390592bc7d93, type: 2}
-  - {fileID: 11400000, guid: 822ea9d45a1df7545993386b69abc55d, type: 2}
   - {fileID: 11400000, guid: 88d13809c1a3fba459d8ab7950e389c1, type: 2}
+  - {fileID: 11400000, guid: bd1ffd854946f884790b12aaeaa724ed, type: 2}
+  - {fileID: 11400000, guid: 61e47f1019016ea49bd583911105a762, type: 2}
+  - {fileID: 11400000, guid: 4682bf98357a0104286fcb6e402a2ee4, type: 2}
+  - {fileID: 11400000, guid: ad3a1ce21a0202a489ab3341d4f67368, type: 2}
   ShopSize: 12

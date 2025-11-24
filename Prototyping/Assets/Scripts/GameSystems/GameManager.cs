@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] List<GameObject> Players = new List<GameObject>();
     [SerializeField] UnityEvent AllPlayersDead;
+    [SerializeField] TextMeshProUGUI GoldText;
+
     public float BossesKilled
     {
         get { return _bossesKilled; }
@@ -27,7 +31,11 @@ public class GameManager : MonoBehaviour
             Destroy(this);
     }
 
-    public void ChangeGold(int value) => _gold += value;
+    public void ChangeGold(int value)
+    {
+         _gold += value;
+        GoldText.text = value.ToString();
+    }
 
 
     /// <summary>

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177a4c5d620376d4f9e6d9984f434695, type: 3}
+  m_Name: RamItem
+  m_EditorClassIdentifier: 
+  Name: Ram
+  Description: Fly towards your target while firing a short-range barrage
+  Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  Price: 0
+  RarityWeight: 1
+  TriggerEvent: 0
+  ProjectileToEquip: {fileID: 4311727026875598617, guid: 7d5d08aad21eda24e9948797bf63ed94, type: 3}
+  EquipInSlot: 0

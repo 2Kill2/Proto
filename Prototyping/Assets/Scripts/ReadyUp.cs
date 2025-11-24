@@ -1,26 +1,34 @@
 using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ReadyUp : MonoBehaviour
 {
-    // No time to properly code this idc
-
     [SerializeField] GameObject SlimeKing;
     [SerializeField] GameObject Cam;
     [SerializeField] TextMeshProUGUI Label;
+
+    //Slime, script uses this as default
     [SerializeField] Transform Destination;
     [SerializeField] Transform DestinationCam;
     [SerializeField] GameObject DestinationBoss;
 
+    //Paladin
     [SerializeField] Transform Destination2;
     [SerializeField] Transform DestinationCam2;
     [SerializeField] GameObject DestinationBoss2;
 
+    //Lich
     [SerializeField] Transform Destination3;
     [SerializeField] Transform DestinationCam3;
     [SerializeField] GameObject DestinationBoss3;
+
+    //Dragon
+    [SerializeField] Transform Destination4;
+    [SerializeField] Transform DestinationCam4;
+    [SerializeField] GameObject DestinationBoss4;
 
     [SerializeField] Transform shopCam;
     [SerializeField] Transform shopSpawn;
@@ -97,6 +105,11 @@ public class ReadyUp : MonoBehaviour
 
     public void MoveDown()
     {
+        StartCoroutine(WaitAndMove());
+    }
+    IEnumerator WaitAndMove()
+    {
+        yield return new WaitForSeconds(5.0f);
         Cam.transform.position = shopCam.position;
         Cam.GetComponent<Camera>().orthographicSize = 5.0f;
         CountPlayers();
@@ -119,5 +132,11 @@ public class ReadyUp : MonoBehaviour
         DestinationCam = DestinationCam3;
         DestinationBoss = DestinationBoss3;
         Destination = Destination3;
+    }
+    public void LichDefeated()
+    {
+        DestinationCam = DestinationCam4;
+        DestinationBoss = DestinationBoss4;
+        Destination = Destination4;
     }
 }

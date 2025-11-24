@@ -196,10 +196,10 @@ TextureImporter:
       name: BlueReviveSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 487
-        y: 119
-        width: 146
-        height: 210
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: BlueReviveSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 871
-        y: 167
-        width: 146
-        height: 202
+        x: 384
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: BlueReviveSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1023
-        y: 287
-        width: 10
-        height: 10
+        x: 768
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: BlueReviveSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1255
-        y: 119
-        width: 146
-        height: 210
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: BlueReviveSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 1639
-        y: 111
-        width: 146
-        height: 186
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,605 +302,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 1023
-        y: 263
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 078624d90bbc0b330800000000000000
-      internalID: 3724700851248457840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 1047
-        y: 271
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff686b5f1882d4560800000000000000
-      internalID: 7299535109675714303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 111
-        width: 178
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc2905458d8e4c590800000000000000
-      internalID: -7654737450797854005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 255
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85ad1e4c01fb83cb0800000000000000
-      internalID: -4883943717139785128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 1407
-        y: 255
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 414715308f5c8e3d0800000000000000
-      internalID: -3177071868111653868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_10
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 231
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57d6130f2c5c8aa60800000000000000
-      internalID: 7685610205151849845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 1407
-        y: 231
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86e7b082047a0a170800000000000000
-      internalID: 8187728016551149160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_12
-      rect:
-        serializedVersion: 2
-        x: 855
-        y: 207
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b31a4eee0fafa4f70800000000000000
-      internalID: 9172419503800492347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_13
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 191
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 419a1671b9ca14fc0800000000000000
-      internalID: -3512336452260091628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_14
-      rect:
-        serializedVersion: 2
-        x: 1231
-        y: 191
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd320d66ffe74aae0800000000000000
-      internalID: -1538965537247190049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_15
-      rect:
-        serializedVersion: 2
-        x: 863
-        y: 167
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3af8eb0fdc197220800000000000000
-      internalID: 2484048413774641723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_16
-      rect:
-        serializedVersion: 2
-        x: 959
-        y: 143
-        width: 58
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fbd5dbc3dbd515a0800000000000000
-      internalID: -6551088380236145677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_17
-      rect:
-        serializedVersion: 2
-        x: 1023
-        y: 175
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5810b314659027c0800000000000000
-      internalID: -4098111403847575462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_18
-      rect:
-        serializedVersion: 2
-        x: 1063
-        y: 175
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 637ebc9b19f159090800000000000000
-      internalID: -8028476049970174154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_19
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 135
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68edc4e4ce8351b60800000000000000
-      internalID: 7716136124146310790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_20
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 143
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee94de01d2f1854d0800000000000000
-      internalID: -3145730061300315666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_21
-      rect:
-        serializedVersion: 2
-        x: 879
-        y: 111
-        width: 66
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16820cd11330778f0800000000000000
-      internalID: -542961720587442079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_22
-      rect:
-        serializedVersion: 2
-        x: 943
-        y: 95
-        width: 42
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25864fad5a00f91e0800000000000000
-      internalID: -2189030181535717294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_23
-      rect:
-        serializedVersion: 2
-        x: 1247
-        y: 135
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5fde65a1217bc190800000000000000
-      internalID: -7941129128614371493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_24
-      rect:
-        serializedVersion: 2
-        x: 1407
-        y: 143
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fb83f273689b6bc0800000000000000
-      internalID: -3788767108604392463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_25
-      rect:
-        serializedVersion: 2
-        x: 863
-        y: 111
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 186ff88ec379aae50800000000000000
-      internalID: 6821430873461618305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_26
-      rect:
-        serializedVersion: 2
-        x: 999
-        y: 119
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2cc2c572532493530800000000000000
-      internalID: 3835169353743740098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_27
-      rect:
-        serializedVersion: 2
-        x: 1039
-        y: 119
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0ba8d75bb4bee500800000000000000
-      internalID: 427477731372477199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_28
-      rect:
-        serializedVersion: 2
-        x: 887
-        y: 95
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 671b4e87556fd3a20800000000000000
-      internalID: 3043859770133229942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_29
-      rect:
-        serializedVersion: 2
-        x: 919
-        y: 95
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 599f168951e8c00e0800000000000000
-      internalID: -2302309086091150955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_30
-      rect:
-        serializedVersion: 2
-        x: 991
-        y: 95
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 676abd3f9b66d9580800000000000000
-      internalID: -8818779546475321738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueReviveSpriteSheet_31
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 95
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fb39341f1c557620800000000000000
-      internalID: 2771222434269445105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 56b06baecdb28a947905a67377cbcc2e
     internalID: 0
     vertices: []
     indices: 
@@ -912,36 +318,9 @@ TextureImporter:
     nameFileIdTable:
       BlueReviveSpriteSheet_0: -7128619592164823314
       BlueReviveSpriteSheet_1: 2832453862504393376
-      BlueReviveSpriteSheet_10: 7685610205151849845
-      BlueReviveSpriteSheet_11: 8187728016551149160
-      BlueReviveSpriteSheet_12: 9172419503800492347
-      BlueReviveSpriteSheet_13: -3512336452260091628
-      BlueReviveSpriteSheet_14: -1538965537247190049
-      BlueReviveSpriteSheet_15: 2484048413774641723
-      BlueReviveSpriteSheet_16: -6551088380236145677
-      BlueReviveSpriteSheet_17: -4098111403847575462
-      BlueReviveSpriteSheet_18: -8028476049970174154
-      BlueReviveSpriteSheet_19: 7716136124146310790
       BlueReviveSpriteSheet_2: 6045197991491245463
-      BlueReviveSpriteSheet_20: -3145730061300315666
-      BlueReviveSpriteSheet_21: -542961720587442079
-      BlueReviveSpriteSheet_22: -2189030181535717294
-      BlueReviveSpriteSheet_23: -7941129128614371493
-      BlueReviveSpriteSheet_24: -3788767108604392463
-      BlueReviveSpriteSheet_25: 6821430873461618305
-      BlueReviveSpriteSheet_26: 3835169353743740098
-      BlueReviveSpriteSheet_27: 427477731372477199
-      BlueReviveSpriteSheet_28: 3043859770133229942
-      BlueReviveSpriteSheet_29: -2302309086091150955
       BlueReviveSpriteSheet_3: 5670477448863580248
-      BlueReviveSpriteSheet_30: -8818779546475321738
-      BlueReviveSpriteSheet_31: 2771222434269445105
       BlueReviveSpriteSheet_4: -6690357355736234040
-      BlueReviveSpriteSheet_5: 3724700851248457840
-      BlueReviveSpriteSheet_6: 7299535109675714303
-      BlueReviveSpriteSheet_7: -7654737450797854005
-      BlueReviveSpriteSheet_8: -4883943717139785128
-      BlueReviveSpriteSheet_9: -3177071868111653868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -131,4 +131,4 @@ MonoBehaviour:
   Data: {fileID: 11400000, guid: a561a83b626e22a4e908c94b83539a61, type: 2}
   LayerToDamage:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256

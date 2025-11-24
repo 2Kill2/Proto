@@ -27,4 +27,4 @@ MonoBehaviour:
   Color:
     serializedVersion: 2
     rgba: 4278190335
-  ShootAudio: {fileID: 0}
+  ShootAudio: {fileID: 8300000, guid: a68c256367ddd99408b049fa6e936711, type: 3}

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afba87a217c44d4ead0e6e6a7f5e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: c33d9508d655be9408b47daa97d376be, type: 2}
+  Data: {fileID: 11400000, guid: 8b59505028784c545b3fd6f5619eecde, type: 2}
   LayerToDamage:
     serializedVersion: 2
     m_Bits: 128

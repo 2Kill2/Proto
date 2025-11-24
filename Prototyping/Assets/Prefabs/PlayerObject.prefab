@@ -461,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB2D: {fileID: 3113196763871929718}
   PlayerAnimator: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
   WalkSpeed: 5
   DodgeForce: 300
   DodgeLength: 0.1
@@ -554,7 +555,7 @@ Animator:
   m_GameObject: {fileID: 2665370547671504092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf446407ee24db24b955e470e9871082, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
