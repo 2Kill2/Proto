@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc71a1dd39dcfa143a2377af5023be0c, type: 3}
+  m_Name: SoulDrainAttack
+  m_EditorClassIdentifier: 
+  windUp: 0
+  postAttack: 0
+  telegraphTime: 0.4
+  channelDuration: 2
+  tickInterval: 0.4
+  drainRadius: 4
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  damagePerTick: 3
+  healMultiplier: 0.5
+  lineMaterial: {fileID: 2100000, guid: bf992716efa975c40a99f8d30d04dec9, type: 2}
+  lineWidth: 0.05
+  lineColor: {r: 0, g: 1, b: 0, a: 1}
+  radiusTelegraphPrefab: {fileID: 6150604399137868391, guid: f07ae1579a5ade147870ba28b53cf53f, type: 3}
