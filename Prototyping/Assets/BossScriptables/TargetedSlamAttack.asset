@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0eba75370b4dce46a2673de992d5154, type: 3}
   m_Name: TargetedSlamAttack
   m_EditorClassIdentifier: 
-  windUp: 0
+  windUp: 2
   postAttack: 0
   playerTag: Player
   trackingDuration: 0.6
