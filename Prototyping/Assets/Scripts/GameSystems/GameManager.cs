@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public void CountPlayers()
     {
+        Players.Clear();
+        
         int playerLayer = LayerMask.NameToLayer("Player");
 
         var objects = FindObjectsByType<GameObject>(

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b528647d279340d408b5b8c95d1e93b1, type: 3}
+  m_Name: Stage2Items 2
+  m_EditorClassIdentifier: 
+  ItemsInTable:
+  - {fileID: 11400000, guid: dd321d5069430354b831a3fe4575a9a8, type: 2}
+  - {fileID: 11400000, guid: dc67bea6f546f8940a2331b998266e38, type: 2}
+  - {fileID: 11400000, guid: 99a7ff8f275d0bd44809d7ddb21b9018, type: 2}
+  - {fileID: 11400000, guid: 25dd3dbabb427cf4fbfff4900e21d275, type: 2}
+  - {fileID: 11400000, guid: c6a625987647a0742b5f5a5ddb77379e, type: 2}
+  - {fileID: 11400000, guid: c890c1d602e8bd946acb1cac07bf91fe, type: 2}
+  - {fileID: 11400000, guid: 6be1782453089634a9996cab7de2a0d5, type: 2}
+  - {fileID: 11400000, guid: ad3a1ce21a0202a489ab3341d4f67368, type: 2}
+  - {fileID: 11400000, guid: 4682bf98357a0104286fcb6e402a2ee4, type: 2}
+  - {fileID: 11400000, guid: 53a37b44198c9324d9ac1dbd63db9f62, type: 2}
+  - {fileID: 11400000, guid: 6fdcdede7e41fba4cb4200c44a46b041, type: 2}
+  - {fileID: 11400000, guid: d804bd0b4c55985468948845a6fb5514, type: 2}
+  - {fileID: 11400000, guid: bf8ef70ef6dccef4bbb86bc220c90af9, type: 2}
+  - {fileID: 11400000, guid: e3c8aefc6a80b7e468e5e9cb84c905cf, type: 2}
+  - {fileID: 11400000, guid: 608c714d3acdd2b4aae1dc96864cf32f, type: 2}
+  - {fileID: 11400000, guid: 4a37245749d556046aef66cb91b9b02a, type: 2}
+  - {fileID: 11400000, guid: 9efcfe98d7096d747859a71b47deb539, type: 2}
+  - {fileID: 11400000, guid: 3747a5d44076c0a43bfbeff5a32dcb83, type: 2}
+  - {fileID: 11400000, guid: 3c1f95f7462b4894c9b6784e38e528b5, type: 2}
+  - {fileID: 11400000, guid: 0e62f78a59c909f4a9c931ea89425b53, type: 2}
+  - {fileID: 11400000, guid: 61e47f1019016ea49bd583911105a762, type: 2}
+  - {fileID: 11400000, guid: 0c34dbb9f70ddc04ca92c3a19828bcff, type: 2}
+  - {fileID: 11400000, guid: 2cd9955ffc4103044874340dbe26051a, type: 2}
+  - {fileID: 11400000, guid: d414b8781af07224e8c7592841b54123, type: 2}
+  - {fileID: 11400000, guid: 4a16ee679586b36488f4ade04187a71b, type: 2}
+  - {fileID: 11400000, guid: e8b147efb0f6f8d44b511988f9356ead, type: 2}
+  - {fileID: 11400000, guid: bd1ffd854946f884790b12aaeaa724ed, type: 2}
+  - {fileID: 11400000, guid: 1bd13660819e93548b4a55f8ed3cafa9, type: 2}
+  - {fileID: 11400000, guid: 86cb87979584ed045a8978ecad7bde38, type: 2}
+  ShopSize: 6

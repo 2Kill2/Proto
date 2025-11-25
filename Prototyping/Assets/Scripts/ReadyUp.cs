@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-
+using System.Collections.Generic;
 
 public class ReadyUp : MonoBehaviour
 {
@@ -11,24 +10,19 @@ public class ReadyUp : MonoBehaviour
     [SerializeField] GameObject NextBoss;
     [SerializeField] GameObject[] Bosses;
 
-   
     [SerializeField] Camera Cam;
     [SerializeField] TextMeshProUGUI Label;
 
-    
     [SerializeField] Transform Destination;
 
-    [SerializeField] GameObject ThroneRoom,ChestRoom,LavaPit;
-    
+    [SerializeField] GameObject ThroneRoom, ChestRoom, LavaPit;
 
     [SerializeField] Transform shopCam;
-    [SerializeField] Transform shopSpawn;
+    [SerializeField] GameObject shopSpawn;
 
     [SerializeField] ShopSpawner ShopSpawner;
 
     [SerializeField] public UnityEvent BossSpawn;
-
-    [SerializeField] List<GameObject> Players = new List<GameObject>();
 
     public string targetTag = "Player";
     private bool db = false;
@@ -42,71 +36,52 @@ public class ReadyUp : MonoBehaviour
         taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
         Manager = GameManager.instance;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         touchingObjects.Add(collision.gameObject);
-        Debug.Log(touchingObjects.Count);
-    }
-
-    private void SelectBoss()
-    {
-        if(NextBoss == null)
-            NextBoss = Bosses[Random.Range(0, Bosses.Length)];
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         touchingObjects.Remove(collision.gameObject);
-
     }
 
-    // You can call this method to get the current count of touching objects
-    public int GetTouchingObjectCount()
+    private void SelectBoss()
     {
-        return touchingObjects.Count;
+        if (NextBoss == null)
+            NextBoss = Bosses[Random.Range(0, Bosses.Length)];
     }
 
     private void Update()
     {
-        if(_activeBoss == null)
-        taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
+        if (_activeBoss == null)
+        {
+            taggedObjects = GameObject.FindGameObjectsWithTag(targetTag);
+        }
 
-        Label.text = touchingObjects.Count+"/"+taggedObjects.Length;
-        if (touchingObjects.Count > 0 && touchingObjects.Count == taggedObjects.Length && db==false)
+        Label.text = touchingObjects.Count + "/" + taggedObjects.Length;
+
+        if (touchingObjects.Count > 0 &&
+            touchingObjects.Count == taggedObjects.Length &&
+            db == false)
         {
             db = true;
             ToArena();
         }
     }
 
-    private void CountPlayers()
-    {
-        int playerLayer = LayerMask.NameToLayer("Player");
-
-        var objects = FindObjectsByType<GameObject>(
-            FindObjectsSortMode.None
-        );
-
-        foreach (var obj in objects)
-        {
-            if (obj.layer == playerLayer)
-            {
-                Players.Add(obj);
-            }
-        }
-    }
-
     private void ToArena()
     {
-        Manager.CountPlayers();
         Collider2D collider = null;
         GoldCount.SetActive(false);
+
         switch (NextBoss.GetComponent<BossBase>().Arena)
         {
             case BossBase.Arenas.ChestRoom:
                 Destination.position = ChestRoom.transform.position;
                 collider = ChestRoom.GetComponent<Collider2D>();
-                break;         
+                break;
             case BossBase.Arenas.ThroneRoom:
                 Destination.position = ThroneRoom.transform.position;
                 collider = ThroneRoom.GetComponent<Collider2D>();
@@ -118,16 +93,17 @@ public class ReadyUp : MonoBehaviour
         }
 
         _activeBoss = Instantiate(NextBoss, Destination.transform.position, Quaternion.identity);
-
         _activeBoss.GetComponent<Health>().DeadEvent += BossDied;
-
         _activeBoss.GetComponent<BossBase>().SetArena(collider);
 
         Cam.transform.position = new Vector3(Destination.position.x, Destination.position.y, -10);
         Cam.orthographicSize = 8.0f;
-        foreach (GameObject obj in taggedObjects)
+
+        var allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        foreach (var obj in allObjects)
         {
-            obj.transform.position = Destination.position;
+            if (obj.layer == LayerMask.NameToLayer("Player"))
+                obj.transform.position = Destination.position;
         }
     }
 
@@ -136,7 +112,6 @@ public class ReadyUp : MonoBehaviour
         _activeBoss.GetComponent<Health>().DeadEvent -= BossDied;
 
         Manager.BossesKilled += 1;
-
         Manager.ChangeGold(100 * (Manager.BossesKilled + 1));
 
         Destroy(_activeBoss);
@@ -145,7 +120,6 @@ public class ReadyUp : MonoBehaviour
 
     public void ToShop()
     {
-       
         ShopSpawner.NewShop();
         GoldCount.SetActive(true);
         NextBoss = null;
@@ -156,14 +130,21 @@ public class ReadyUp : MonoBehaviour
     IEnumerator WaitAndMove()
     {
         yield return new WaitForSeconds(5.0f);
+
         Cam.transform.position = shopCam.position;
         Cam.orthographicSize = 5.0f;
-        CountPlayers();
-        foreach (GameObject obj in Players)
+
+      
+        var allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        foreach (var obj in allObjects)
         {
-            obj.transform.position = shopSpawn.position;
-            obj.GetComponent<Health>().RefillHealth();
+            if (obj.layer == LayerMask.NameToLayer("Player"))
+            {
+                obj.transform.position = new Vector3(0, 0, 0);
+                obj.GetComponent<Health>().RefillHealth();
+            }
         }
+
         db = false;
     }
 }

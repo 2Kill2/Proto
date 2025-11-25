@@ -29,9 +29,10 @@ public class ShopSpawner : MonoBehaviour
         if (_shops.Count > 0)
         {
             foreach (var shop in _shops)
+                if(shop != null)
                 Destroy(shop.gameObject);
 
-            _shops.Clear();
+            
         }
 
         ShopItemTable chosenTable = _gameManager.BossesKilled switch
