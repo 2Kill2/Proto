@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8d738bcbcfc0419c3669f303d4155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EarlyGameDrops: {fileID: 11400000, guid: f1b6859fe9167334a9973ef6f64ed430, type: 2}
-  MidGameDrops: {fileID: 11400000, guid: f1b6859fe9167334a9973ef6f64ed430, type: 2}
-  LateGameDrops: {fileID: 11400000, guid: f1b6859fe9167334a9973ef6f64ed430, type: 2}
+  EarlyGameDrops: {fileID: 11400000, guid: a0cf77df32eda814683a595a49315cf5, type: 2}
+  MidGameDrops: {fileID: 11400000, guid: 25a010d377f0fcf4fa0587e4202fd803, type: 2}
+  LateGameDrops: {fileID: 11400000, guid: 058909a1c14a3d54793c5b7cda04e2dc, type: 2}
   ShopPrefab: {fileID: 4422029699151485442, guid: 580f293e8c258f140b93bd33bff2d2f5, type: 3}
   grid: {fileID: 12454184}
 --- !u!114 &12454184
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 582901367}
   - component: {fileID: 582901368}
   m_Layer: 0
-  m_Name: BG_ArenaArt2
+  m_Name: BG_ArenaArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ Transform:
   m_GameObject: {fileID: 582901365}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.046666466, y: -5.126667, z: 0}
+  m_LocalPosition: {x: -12.71, y: -5.126667, z: 0}
   m_LocalScale: {x: 5.3333335, y: 5.3333335, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1268,7 +1268,7 @@ Transform:
   m_GameObject: {fileID: 894894964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0, y: -1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2889,11 +2889,11 @@ PrefabInstance:
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: NextBoss
       value: 
-      objectReference: {fileID: 8896578935839116205, guid: 31a91ee6d6773cd40a331d00280e1eb8, type: 3}
+      objectReference: {fileID: 8896578935839116205, guid: 05cbeb0707e3c224faee3c7b4d6c2bba, type: 3}
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: ChestRoom
       value: 
-      objectReference: {fileID: 538630139}
+      objectReference: {fileID: 582901365}
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: GoldCount
       value: 
@@ -2901,7 +2901,7 @@ PrefabInstance:
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: shopSpawn
       value: 
-      objectReference: {fileID: 894894965}
+      objectReference: {fileID: 894894964}
     - target: {fileID: 3389056725976433993, guid: 68c7288969eafa542bc0498884a26e50, type: 3}
       propertyPath: ThroneRoom
       value: 
