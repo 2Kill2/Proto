@@ -33,7 +33,11 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Bits: 512
+=======
+    m_Bits: 4
+>>>>>>> Stashed changes
 =======
     m_Bits: 4
 >>>>>>> Stashed changes
