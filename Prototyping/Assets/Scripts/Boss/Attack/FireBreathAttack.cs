@@ -23,7 +23,7 @@ public class FireBreathAttack : BossAttack
         if (windUp > 0f) yield return new WaitForSeconds(windUp);
 
         var vis = boss.GetComponent<BossVisuals>();
-        if (useAnimatorCues) vis?.SetTelegraph(true);
+        if (useAnimatorCues) vis?.SetBreath(true);
 
         //Flame Origin
         Vector2 origin = boss.ProjectileOrigin ? (Vector2)boss.ProjectileOrigin.position: boss.Rb.position;
@@ -77,7 +77,7 @@ public class FireBreathAttack : BossAttack
 
             yield return null;
         }
-        if (useAnimatorCues) vis?.SetTelegraph(false);
+        if (useAnimatorCues) vis?.SetBreath(false);
         if (postAttack > 0f) yield return new WaitForSeconds(postAttack);
     }
 }

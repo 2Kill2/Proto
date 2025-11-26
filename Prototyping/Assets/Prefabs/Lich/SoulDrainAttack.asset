@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc71a1dd39dcfa143a2377af5023be0c, type: 3}
   m_Name: SoulDrainAttack
   m_EditorClassIdentifier: 
-  windUp: 0
+  windUp: 2
   postAttack: 0
-  telegraphTime: 0.4
-  channelDuration: 2
+  telegraphTime: 1
+  channelDuration: 5
   tickInterval: 0.4
-  drainRadius: 4
+  drainRadius: 3
   playerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   damagePerTick: 3
   healMultiplier: 0.5
   lineMaterial: {fileID: 2100000, guid: bf992716efa975c40a99f8d30d04dec9, type: 2}
-  lineWidth: 0.05
+  lineWidth: 0.3
   lineColor: {r: 0, g: 1, b: 0, a: 1}
-  radiusTelegraphPrefab: {fileID: 6150604399137868391, guid: f07ae1579a5ade147870ba28b53cf53f, type: 3}
+  telegraphMaterial: {fileID: 2100000, guid: bf992716efa975c40a99f8d30d04dec9, type: 2}
+  telegraphLineWidth: 0.05
+  telegraphColor: {r: 0, g: 1, b: 0, a: 1}
+  telegraphSegments: 48

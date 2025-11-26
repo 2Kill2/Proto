@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1514709a1a6334d87ba343bb363b0f, type: 3}
   m_Name: BonePrisonAttack
   m_EditorClassIdentifier: 
-  windUp: 0
+  windUp: 2
   postAttack: 0
   telegraphPrefab: {fileID: 4427087315795244745, guid: cf25314fd95693b48a4566a594ac5628, type: 3}
-  prisonPrefab: {fileID: 3394211127896892153, guid: 3df42fd3fd23cb54a993c60d6a5be073, type: 3}
-  telegraphTime: 0.7
-  prisonActiveTime: 2.5
+  prisonPrefab: {fileID: 4731840985752824219, guid: c852891e32cef84488c2e926371b85d8, type: 3}
+  telegraphTime: 1
+  prisonActiveTime: 3
   damageTickInterval: 0.5
   prisonRadius: 2
   playerLayers:

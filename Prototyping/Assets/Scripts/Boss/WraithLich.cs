@@ -14,6 +14,8 @@ public class WraithLich : BossBase
     [Tooltip("Movement used when lich teleports.")]
     [SerializeField] private BossMovement teleportMovement;
 
+    [SerializeField] private Transform soulDrainOrigin;
+    public Transform SoulDrainOrigin => soulDrainOrigin;
     private int attacksSinceTeleport = 0;
     private int attacksBeforeTeleport = 1;
     private bool shouldTeleport = false;

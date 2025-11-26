@@ -67,9 +67,9 @@ public class SupernovaAttack : BossAttack
             }
         }
 
-        vis?.SetTelegraph(true);
+        vis?.SetJump(true);
         if (preJumpWindup > 0f) yield return new WaitForSeconds(preJumpWindup);
-        vis?.SetTelegraph(false);
+        vis?.SetJump(false);
 
         vis?.SetHidden(true);
 
@@ -90,13 +90,11 @@ public class SupernovaAttack : BossAttack
             blastTelegraph.transform.localScale = new Vector3(d, d, 1f);
         }
 
-        vis?.SetTelegraph(true);
+        vis?.SetJump(true);
         yield return new WaitForSeconds(blastTelegraphTime);
-        vis?.SetTelegraph(false);
+        vis?.SetJump(false);
 
         if (blastTelegraph != null) Object.Destroy(blastTelegraph);
-
-        vis?.TriggerImpact();
 
         if (explosionPrefab != null)
         {

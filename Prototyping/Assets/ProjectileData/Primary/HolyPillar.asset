@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cedd681e4536b409666496bdd66f36, type: 3}
+  m_Name: HolyPillar
+  m_EditorClassIdentifier: 
+  NameID: HolyPillar
+  Damage: 10
+  Velocity: 0
+  Spread: 0
+  Lifetime: 3
+  Recoil: {x: 0, y: 0}
+  Firerate: 0
+  Size: 1
+  FireType: 0
+  Count: 0
+  Angle: 0
+  Sprite: {fileID: -2874055968296479541, guid: a4eb837f74d4c3e48804d901f1858f5b, type: 3}
+  Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  ShootAudio: {fileID: 0}
