@@ -26,10 +26,10 @@ MonoBehaviour:
   blastRadius: 10
   explosionPrefab: {fileID: 7735474510415840376, guid: 9699db23446c77c49b662effdc638f49, type: 3}
   explosionVfxDuration: 5
-  blastDamage: 15
+  blastDamage: 30
   playerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94184e38b3ca2744a5f2a82b8f3dd83, type: 3}
+  m_Name: FirePillarAttack
+  m_EditorClassIdentifier: 
+  windUp: 1.5
+  postAttack: 1
+  pillarCount: 6
+  minSeparation: 1.5
+  wallPadding: 0.6
+  maxGlobalAttempts: 2000
+  telegraphPrefab: {fileID: 5813079095294537956, guid: c28665b0efbce234f9cd194db98f61dc, type: 3}
+  telegraphTime: 1.8
+  pillarProjectilePrefab: {fileID: -1877850911558936470, guid: c28665b0efbce234f9cd194db98f61dc, type: 3}
+  useAnimatorCues: 1

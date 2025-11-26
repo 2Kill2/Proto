@@ -26,8 +26,11 @@ public class SoulDrainAttack : BossAttack
     public float lineWidth = 0.05f;
     public Color lineColor = Color.green;
 
-    [Header("Telegraph Radius VFX")]
-    public GameObject radiusTelegraphPrefab;
+    [Header("Telegraph Circle (code)")]
+    public Material telegraphMaterial;
+    public float telegraphLineWidth = 0.05f;
+    public Color telegraphColor = Color.green;
+    public int telegraphSegments = 48;
 
     public override IEnumerator Execute(BossBase boss)
     {
@@ -35,27 +38,44 @@ public class SoulDrainAttack : BossAttack
 
         var vis = boss.GetComponent<BossVisuals>();
 
-        GameObject telegraph = null;
+        //find origin for the beam
+        var lich = boss as WraithLich;
+        Transform originTf = lich ? lich.SoulDrainOrigin : null;
 
-        if (radiusTelegraphPrefab != null)
+        //Telegraph circle
+        GameObject telegraphObj = null;
+        LineRenderer teleLR = null;
+
+        if (telegraphMaterial != null)
         {
-            telegraph = Object.Instantiate(
-                radiusTelegraphPrefab,
-                boss.transform.position,
-                Quaternion.identity
-            );
+            telegraphObj = new GameObject("SoulDrainTelegraph");
+            telegraphObj.transform.SetParent(boss.transform);
+            telegraphObj.transform.localPosition = Vector3.zero;
 
-            telegraph.transform.SetParent(boss.transform);
+            teleLR = telegraphObj.AddComponent<LineRenderer>();
+            teleLR.material = telegraphMaterial;
+            teleLR.widthMultiplier = telegraphLineWidth;
+            teleLR.loop = true;
+            teleLR.useWorldSpace = false;
+            teleLR.positionCount = telegraphSegments;
 
-            float d = drainRadius * 2f;
-            telegraph.transform.localScale = new Vector3(d, d, 1f);
+            teleLR.startColor = telegraphColor;
+            teleLR.endColor = telegraphColor;
+
+            float step = 2f * Mathf.PI / telegraphSegments;
+            for (int i = 0; i < telegraphSegments; i++)
+            {
+                float a = step * i;
+                Vector3 p = new Vector3(Mathf.Cos(a), Mathf.Sin(a), 0f) * drainRadius;
+                teleLR.SetPosition(i, p);
+            }
         }
 
         vis?.SetTelegraph(true);
         yield return new WaitForSeconds(telegraphTime);
         vis?.SetTelegraph(false);
 
-        if (telegraph != null) Object.Destroy(telegraph);
+        if (telegraphObj != null) Object.Destroy(telegraphObj);
 
         vis?.TriggerCast();
 
@@ -85,10 +105,12 @@ public class SoulDrainAttack : BossAttack
 
             Transform target = boss.GetCurrentTarget();
 
+            //beam from origin transform (if set) to target, as long as target is in radius
             if (lr != null && target != null && Vector2.Distance(center, target.position) <= drainRadius)
             {
+                Vector3 originPos = originTf ? originTf.position : boss.transform.position;
                 lr.enabled = true;
-                lr.SetPosition(0, center);
+                lr.SetPosition(0, originPos);
                 lr.SetPosition(1, target.position);
             }
             else if (lr != null)

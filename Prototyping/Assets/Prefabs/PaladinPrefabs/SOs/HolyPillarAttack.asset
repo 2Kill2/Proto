@@ -18,7 +18,7 @@ MonoBehaviour:
   minSeparation: 1.5
   wallPadding: 0.6
   maxGlobalAttempts: 2000
-  telegraphPrefab: {fileID: 3142549489049608683, guid: b7fd2d83c44164e4bb599916bd4bffae, type: 3}
+  telegraphPrefab: {fileID: -2253911629886400664, guid: a4eb837f74d4c3e48804d901f1858f5b, type: 3}
   telegraphTime: 1.8
-  pillarProjectilePrefab: {fileID: 6584953358291324270, guid: 56f40439546880a4e97d0940216adfd4, type: 3}
+  pillarProjectilePrefab: {fileID: -1877850911558936470, guid: a00550a31fcdf3e46b92e41964375a84, type: 3}
   useAnimatorCues: 1

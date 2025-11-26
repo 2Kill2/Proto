@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766a8601e6e59ce4fa631cda83c005b8, type: 3}
   m_Name: FireBreathAttack
   m_EditorClassIdentifier: 
-  windUp: 0
+  windUp: 2
   postAttack: 0
   coneAngle: 60
   projectilesPerBurst: 8

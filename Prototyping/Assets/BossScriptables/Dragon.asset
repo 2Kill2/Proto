@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   minMoveCooldown: 0.8
-  maxMoveCooldown: 2
+  maxMoveCooldown: 1
   attackCooldown: 2
   movements:
   - {fileID: 0}
   attacks:
-  - {fileID: 11400000, guid: 55bdaf8b2a2b56e4ebb11ae620916ac5, type: 2}
+  - {fileID: 11400000, guid: e7978188a8539fa4d96fd36d92b18775, type: 2}
   - {fileID: 11400000, guid: 0e939a86c04ddcf4a843b3fb5015f925, type: 2}
-  - {fileID: 11400000, guid: e5818583092892b41905826ef9b97178, type: 2}
+  - {fileID: 11400000, guid: 390706962e1c164428ad9aa4e320e085, type: 2}
